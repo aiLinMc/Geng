@@ -1,0 +1,90 @@
+Chinese: 
+本学术自由许可证（以下简称“许可”）适用于任何原创作品（以下简称“原始作品”），其所有者（以下简称“许可方”）在原始作品的版权声明旁放置了以下许可声明：
+
+根据学术自由许可证 3.0 版授权
+
+1) 版权许可授予。许可方授予您一项全球性、免版税、非排他性、可再许可的许可，在版权存续期间，允许您进行以下行为：
+    a)  复制原始作品，无论是单独复制还是作为合集的一部分；
+    b)  翻译、改编、改动、变换、修改或编排原始作品，从而创作基于原始作品的衍生作品（以下简称“衍生作品”）；
+    c)  向公众分发或传播原始作品及衍生作品的副本，您可选择任何不违反本学术自由许可证条款和条件（包括许可方保留的权利和救济）的许可证；
+    d)  公开表演原始作品；
+    e)  公开展示原始作品。
+
+2) 专利许可授予。许可方授予您一项全球性、免版税、非排他性、可再许可的许可，在相关专利存续期间，允许您基于许可方提供之原始作品所体现的、由许可方拥有或控制的专利权要求，制造、使用、销售、许诺销售、委托制造和进口原始作品及衍生作品。
+
+3) 源代码许可授予。“源代码”一词指对原始作品进行修改的首选形式，以及所有描述如何修改原始作品的可用文档。许可方同意，在分发原始作品的每个副本时，同时提供一份原始作品源代码的机器可读副本。许可方保留通过将源代码的机器可读副本置于合理设计的信息存储库中来履行此义务的权利，该存储库旨在确保在许可方持续分发原始作品期间，您能以低廉且便捷的方式访问。
+
+4) 许可授予的排除项。未经许可方明确事先许可，不得使用许可方名称、任何对原始作品有贡献者的名称、或其任何商标或服务标志来认可或推广源自本原始作品的产品。除本文明确声明外，本许可不授予任何关于许可方商标、版权、专利、商业秘密或任何其他知识产权的许可。除第 2 节定义的许可要求外，未授予任何制造、使用、销售、许诺销售、委托制造或进口任何其他专利权要求体现物的专利许可。即使原始作品中包含此类标志，也未授予任何使用许可方商标的许可。本许可中的任何内容均不得解释为禁止许可方依据不同于本许可的条款，对其原本有权许可的任何原始作品进行许可。
+
+5) 外部部署。“外部部署”一词指以任何方式使用、分发或传播原始作品或衍生作品，致使原始作品或衍生作品可能被您以外的任何人使用，无论这些作品是分发给或传播给这些人，还是作为旨在通过网络使用的应用程序提供。作为本文下许可授予的明确条件，您必须将您对原始作品或衍生作品进行的任何外部部署视为第 1(c) 节下的分发行为。
+
+6) 署名权。您必须在您创作的任何衍生作品的源代码中，保留原始作品源代码中的所有版权、专利或商标声明，以及任何许可声明和其中被标识为“署名声明”的任何描述性文本。您必须确保您创作的任何衍生作品的源代码带有显著的署名声明，该声明应合理设计以告知接收者您已修改了原始作品。
+
+7) 来源担保与免责声明。许可方担保，原始作品的版权以及本文中许可方授予的专利权由许可方拥有，或已获得相关版权和专利权贡献者的许可，根据本许可条款再许可给您。除前一句明确声明外，原始作品按“原样”基础在本许可下提供，且不作任何明示或暗示的担保，包括但不限于不侵权、适销性或特定用途适用性的担保。原始作品质量的全部风险由您承担。此免责声明构成本许可的重要组成部分。除非根据此免责声明，否则本许可不授予对原始作品的任何许可。
+
+8) 责任限制。在任何情况下及基于任何法律理论（无论是侵权（包括疏忽）、合同还是其他），许可方均不对任何人因本许可或使用原始作品而引起的任何性质的间接、特殊、附带或后果性损害承担责任，包括但不限于商誉损失、停工、计算机故障或失灵、或任何及所有其他商业损害或损失。此责任限制在适用法律禁止的范围内不适用。
+
+9) 接受与终止。如果您在任何时候明确同意本许可，该同意即表示您对本许可及其所有条款和条件明确且不可撤销的接受。如果您分发或传播原始作品或衍生作品的副本，您必须在当时情况下做出合理努力，以获得接收者对本许可条款的明确同意。本许可规定了您从事第 1 节所列活动（包括您基于原始作品创作衍生作品的权利）的条件，不遵守这些条款和条件即受版权法和国际条约的禁止。本许可中的任何内容均无意影响版权例外和限制（包括“合理使用”或“公平处理”）。如果您未能遵守第 1(c) 节的条件，本许可将立即终止，您将不再能行使本许可授予您的任何权利。
+
+10) 因专利诉讼而终止。自您对许可方或任何被许可人提起诉讼（包括交叉索赔或反诉），主张原始作品侵犯专利之日起，本许可将自动终止，您将不再能行使本许可授予您的任何权利。此终止条款不适用于主张原始作品与其他软件或硬件组合而侵犯专利的诉讼。
+
+11) 管辖权、审判地与准据法。任何与本许可相关的诉讼或起诉，只能在许可方居住地或许可方主要业务所在地的司法管辖区的法院提起，并适用该管辖区的法律（不包括其法律冲突条款）。明确排除适用《联合国国际货物销售合同公约》。在本许可范围外或本许可终止后对原始作品的任何使用，应遵守相应司法管辖区版权法或专利法的要求和处罚。本节在本许可终止后仍然有效。
+
+12) 律师费。在任何要求强制执行本许可条款或寻求相关损害赔偿的诉讼中，胜诉方有权追偿其成本和费用，包括但不限于与该诉讼（包括其任何上诉）相关的合理律师费和成本。本节在本许可终止后仍然有效。
+
+13) 杂项。如果本许可的任何条款被认定为不可执行，则该条款仅在使其可执行所需的范围内进行修改。
+
+14) 本许可中“您”的定义。本许可中各处使用的“您”指根据本许可行使权利并遵守本许可所有条款的个人或法律实体。对于法律实体，“您”包括控制您、受您控制或与您共同受控制的任何实体。就本定义而言，“控制”指 (i) 通过合同或其他方式，直接或间接指导或管理该实体的权力，或 (ii) 拥有百分之五十 (50%) 或以上已发行股份的所有权，或 (iii) 该实体的受益所有权。
+
+15) 使用权。您可以使用本许可或法律未另行限制或约束的所有方式使用原始作品，许可方承诺不干涉也不对您的此类使用负责。
+
+16) 本许可的修改。本许可版权归 © 2005 Lawrence Rosen 所有。允许未经修改地复制、分发或传播本许可。本许可中的任何内容均不允许您修改适用于原始作品或衍生作品的许可。但是，您可以修改本许可的文本，并复制、分发或传播您的修改版本（“修改版许可”），将其应用于其他原创作品，但须遵守以下条件：(i) 您不得以任何方式表明您的修改版许可是“学术自由许可证”或“AFL”，也不得在您的修改版许可名称中使用这些名称；(ii) 您必须将上文第一段中指定的声明替换为“根据<在此处插入您的许可名称>许可”的声明，或替换为您自己的、不易与本许可中的声明混淆的声明；以及 (iii) 除非您的修改版许可已获得开放源代码促进会 (OSI) 的批准且您遵守其许可审查和认证流程，否则您不得声称您的原创作品是开源软件。
+
+
+
+
+
+
+
+
+English: 
+This Academic Free License (the “License”) applies to any original work of authorship (the “Original Work”) whose owner (the “Licensor”) has placed the following licensing notice adjacent to the copyright notice for the Original Work:
+
+Licensed under the Academic Free License version 3.0
+
+1) Grant of Copyright License. Licensor grants You a worldwide, royalty-free, non-exclusive, sublicensable license, for the duration of the copyright, to do the following:
+    a) to reproduce the Original Work in copies, either alone or as part of a collective work;
+    b) to translate, adapt, alter, transform, modify, or arrange the Original Work, thereby creating derivative works (“Derivative Works”) based upon the Original Work;
+    c) to distribute or communicate copies of the Original Work and Derivative Works to the public, under any license of your choice that does not contradict the terms and conditions, including Licensor’s reserved rights and remedies, in this Academic Free License;
+    d) to perform the Original Work publicly; and
+    e) to display the Original Work publicly.
+
+2) Grant of Patent License. Licensor grants You a worldwide, royalty-free, non-exclusive, sublicensable license, under patent claims owned or controlled by the Licensor that are embodied in the Original Work as furnished by the Licensor, for the duration of the patents, to make, use, sell, offer for sale, have made, and import the Original Work and Derivative Works.
+
+3) Grant of Source Code License. The term “Source Code” means the preferred form of the Original Work for making modifications to it and all available documentation describing how to modify the Original Work. Licensor agrees to provide a machine-readable copy of the Source Code of the Original Work along with each copy of the Original Work that Licensor distributes. Licensor reserves the right to satisfy this obligation by placing a machine-readable copy of the Source Code in an information repository reasonably calculated to permit inexpensive and convenient access by You for as long as Licensor continues to distribute the Original Work.
+
+4) Exclusions From License Grant. Neither the names of Licensor, nor the names of any contributors to the Original Work, nor any of their trademarks or service marks, may be used to endorse or promote products derived from this Original Work without express prior permission of the Licensor. Except as expressly stated herein, nothing in this License grants any license to Licensor’s trademarks, copyrights, patents, trade secrets or any other intellectual property. No patent license is granted to make, use, sell, offer for sale, have made, or import embodiments of any patent claims other than the licensed claims defined in Section 2. No license is granted to the trademarks of Licensor even if such marks are included in the Original Work. Nothing in this License shall be interpreted to prohibit Licensor from licensing under terms different from this License any Original Work that Licensor otherwise would have a right to license.
+
+5) External Deployment. The term “External Deployment” means the use, distribution, or communication of the Original Work or Derivative Works in any way such that the Original Work or Derivative Works may be used by anyone other than You, whether those works are distributed or communicated to those persons or made available as an application intended for use over a network. As an express condition for the grants of license hereunder, You must treat any External Deployment by You of the Original Work or a Derivative Work as a distribution under section 1(c).
+
+6) Attribution Rights. You must retain, in the Source Code of any Derivative Works that You create, all copyright, patent, or trademark notices from the Source Code of the Original Work, as well as any notices of licensing and any descriptive text identified therein as an “Attribution Notice.” You must cause the Source Code for any Derivative Works that You create to carry a prominent Attribution Notice reasonably calculated to inform recipients that You have modified the Original Work.
+
+7) Warranty of Provenance and Disclaimer of Warranty. Licensor warrants that the copyright in and to the Original Work and the patent rights granted herein by Licensor are owned by the Licensor or are sublicensed to You under the terms of this License with the permission of the contributor(s) of those copyrights and patent rights. Except as expressly stated in the immediately preceding sentence, the Original Work is provided under this License on an “AS IS” BASIS and WITHOUT WARRANTY, either express or implied, including, without limitation, the warranties of non-infringement, merchantability or fitness for a particular purpose. THE ENTIRE RISK AS TO THE QUALITY OF THE ORIGINAL WORK IS WITH YOU. This DISCLAIMER OF WARRANTY constitutes an essential part of this License. No license to the Original Work is granted by this License except under this disclaimer.
+
+8) Limitation of Liability. Under no circumstances and under no legal theory, whether in tort (including negligence), contract, or otherwise, shall the Licensor be liable to anyone for any indirect, special, incidental, or consequential damages of any character arising as a result of this License or the use of the Original Work including, without limitation, damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses. This limitation of liability shall not apply to the extent applicable law prohibits such limitation.
+
+9) Acceptance and Termination. If, at any time, You expressly assented to this License, that assent indicates your clear and irrevocable acceptance of this License and all of its terms and conditions. If You distribute or communicate copies of the Original Work or a Derivative Work, You must make a reasonable effort under the circumstances to obtain the express assent of recipients to the terms of this License. This License conditions your rights to undertake the activities listed in Section 1, including your right to create Derivative Works based upon the Original Work, and doing so without honoring these terms and conditions is prohibited by copyright law and international treaty. Nothing in this License is intended to affect copyright exceptions and limitations (including “fair use” or “fair dealing”). This License shall terminate immediately and You may no longer exercise any of the rights granted to You by this License upon your failure to honor the conditions in Section 1(c).
+
+10) Termination for Patent Action. This License shall terminate automatically and You may no longer exercise any of the rights granted to You by this License as of the date You commence an action, including a cross-claim or counterclaim, against Licensor or any licensee alleging that the Original Work infringes a patent. This termination provision shall not apply for an action alleging patent infringement by combinations of the Original Work with other software or hardware.
+
+11) Jurisdiction, Venue and Governing Law. Any action or suit relating to this License may be brought only in the courts of a jurisdiction wherein the Licensor resides or in which Licensor conducts its primary business, and under the laws of that jurisdiction excluding its conflict-of-law provisions. The application of the United Nations Convention on Contracts for the International Sale of Goods is expressly excluded. Any use of the Original Work outside the scope of this License or after its termination shall be subject to the requirements and penalties of copyright or patent law in the appropriate jurisdiction. This section shall survive the termination of this License.
+
+12) Attorneys’ Fees. In any action to enforce the terms of this License or seeking damages relating thereto, the prevailing party shall be entitled to recover its costs and expenses, including, without limitation, reasonable attorneys’ fees and costs incurred in connection with such action, including any appeal of such action. This section shall survive the termination of this License.
+
+13) Miscellaneous. If any provision of this License is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable.
+
+14) Definition of “You” in This License. “You” throughout this License, whether in upper or lower case, means an individual or a legal entity exercising rights under, and complying with all of the terms of, this License. For legal entities, “You” includes any entity that controls, is controlled by, or is under common control with you. For purposes of this definition, “control” means (i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial ownership of such entity.
+
+15) Right to Use. You may use the Original Work in all ways not otherwise restricted or conditioned by this License or by law, and Licensor promises not to interfere with or be responsible for such uses by You.
+
+16) Modification of This License. This License is Copyright © 2005 Lawrence Rosen. Permission is granted to copy, distribute, or communicate this License without modification. Nothing in this License permits You to modify this License as applied to the Original Work or to Derivative Works. However, You may modify the text of this License and copy, distribute or communicate your modified version (the “Modified License”) and apply it to other original works of authorship subject to the following conditions: (i) You may not indicate in any way that your Modified License is the “Academic Free License” or “AFL” and you may not use those names in the name of your Modified License; (ii) You must replace the notice specified in the first paragraph above with the notice “Licensed under <insert your license name here>” or with a notice of your own that is not confusingly similar to the notice in this License; and (iii) You may not claim that your original works are open source software unless your Modified License has been approved by Open Source Initiative (OSI) and You comply with its license review and certification process.
