@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "geng:blocks/pinxixi_lottery_box",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "geng:pinxixi_lottery_box"
+        }
+      ]
+    }
+  ]
+}

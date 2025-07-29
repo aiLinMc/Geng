@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "geng:block/melon_stall_top",
+    "up": "geng:block/melon_stall_top",
+    "north": "geng:block/melon_stall_side",
+    "east": "geng:block/melon_stall_side",
+    "south": "geng:block/melon_stall_side",
+    "west": "geng:block/melon_stall_side",
+    "particle": "geng:block/melon_stall_top"
+  },
+  "render_type": "solid"
+}

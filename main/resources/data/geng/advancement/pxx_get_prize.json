@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "geng:gold_coin"
+    },
+    "title": {
+      "translate": "advancements.pxx_get_prize.title"
+    },
+    "description": {
+      "translate": "advancements.pxx_get_prize.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "pxx_get_prize_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 80
+  },
+  "parent": "geng:pxx_attack_300_times"
+}

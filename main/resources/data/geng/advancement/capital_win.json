@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "geng:a_1"
+    },
+    "title": {
+      "translate": "advancements.capital_win.title"
+    },
+    "description": {
+      "translate": "advancements.capital_win.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "capital_win_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 20
+  },
+  "parent": "geng:touched_the_cake_of_capital"
+}

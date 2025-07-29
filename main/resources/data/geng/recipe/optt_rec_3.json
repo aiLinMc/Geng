@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "a",
+    "a"
+  ],
+  "key": {
+    "a": {
+      "tag": "minecraft:walls"
+    }
+  },
+  "result": {
+    "id": "geng:oriental_pearl_tv_tower_pillar",
+    "count": 1
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "geng:hundred_ton_king"
+    },
+    "title": {
+      "translate": "advancements.we_are_all_striving_to_live.title"
+    },
+    "description": {
+      "translate": "advancements.we_are_all_striving_to_live.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "we_are_all_striving_to_live_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "geng:blind_area"
+}

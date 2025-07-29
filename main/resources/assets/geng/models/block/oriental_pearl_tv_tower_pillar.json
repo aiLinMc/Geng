@@ -1,0 +1,9 @@
+{
+  "parent": "geng:custom/oriental_pearl_tv_tower_pillar",
+  "textures": {
+    "all": "geng:block/oriental_pearl_tv_tower_base",
+    "particle": "geng:block/oriental_pearl_tv_tower_base",
+    "0": "geng:block/oriental_pearl_tv_tower_base"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "geng:the_cake_of_capital"
+    },
+    "title": {
+      "translate": "advancements.touched_the_cake_of_capital.title"
+    },
+    "description": {
+      "translate": "advancements.touched_the_cake_of_capital.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "touched_the_cake_of_capital_0": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "geng:the_cake_of_capital"
+          ]
+        }
+      }
+    }
+  },
+  "parent": "geng:geng"
+}

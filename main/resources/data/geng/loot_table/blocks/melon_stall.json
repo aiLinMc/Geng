@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "geng:blocks/melon_stall",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "geng:melon_stall"
+        }
+      ]
+    }
+  ]
+}

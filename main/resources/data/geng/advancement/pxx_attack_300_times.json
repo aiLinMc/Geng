@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "geng:pinxixi_machete"
+    },
+    "title": {
+      "translate": "advancements.pxx_attack_300_times.title"
+    },
+    "description": {
+      "translate": "advancements.pxx_attack_300_times.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "pxx_attack_300_times_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "geng:geng"
+}

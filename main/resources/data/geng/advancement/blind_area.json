@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "geng:hundred_ton_king"
+    },
+    "title": {
+      "translate": "advancements.blind_area.title"
+    },
+    "description": {
+      "translate": "advancements.blind_area.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "blind_area_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "geng:geng"
+}

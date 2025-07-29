@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bcb",
+    "ded"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "b": {
+      "item": "minecraft:flint"
+    },
+    "c": {
+      "item": "minecraft:cake"
+    },
+    "d": {
+      "item": "minecraft:gold_ingot"
+    },
+    "e": {
+      "item": "minecraft:glowstone_dust"
+    }
+  },
+  "result": {
+    "id": "geng:the_cake_of_capital",
+    "count": 1
+  }
+}

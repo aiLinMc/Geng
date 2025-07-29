@@ -1,0 +1,59 @@
+{
+  "capital_smirk": {
+    "subtitle": "subtitles.capital_smirk",
+    "sounds": [
+      {
+        "name": "geng:capital_smirk01",
+        "stream": false
+      },
+      {
+        "name": "geng:capital_smirk02",
+        "stream": false
+      },
+      {
+        "name": "geng:capital_smirk03",
+        "stream": false
+      },
+      {
+        "name": "geng:capital_smirk04",
+        "stream": false
+      }
+    ]
+  },
+  "cut_melon": {
+    "subtitle": "subtitles.cut_melon",
+    "sounds": [
+      {
+        "name": "geng:cut_melon",
+        "stream": false
+      }
+    ]
+  },
+  "hit_villager": {
+    "subtitle": "subtitles.hit_villager",
+    "sounds": [
+      {
+        "name": "geng:hit_villager",
+        "stream": false
+      }
+    ]
+  },
+  "truth": {
+    "subtitle": "subtitles.truth",
+    "sounds": [
+      {
+        "name": "geng:truth",
+        "stream": false
+      }
+    ]
+  },
+  "lie": {
+    "subtitle": "subtitles.lie",
+    "sounds": [
+      {
+        "name": "geng:lie",
+        "stream": false
+      }
+    ]
+  }
+}
