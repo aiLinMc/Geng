@@ -42,3 +42,11 @@ A: Submit your ideas on the [Issues](https://github.com/aiLinMc/Geng/issues) pag
 Q: Do you support other versions of Minecraft?
 
 A: Currently only supports 1.21.1. Unfortunately, I may only stay at that version update.
+
+
+## Sponsored Link
+If you are Chinese, please jump to [this page](https://afdian.com/a/aiLinMc) to sponsor.
+
+Sponsorship links for countries other than China have not yet been opened.
+
+**Your sponsorship is my biggest motivation for updating!**
