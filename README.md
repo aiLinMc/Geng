@@ -12,6 +12,7 @@ This mod use [AFL-3](https://opensource.org/license/afl-3-0-php) License.
   - Pinxixi
   - Russian Proportion
   - Shanghai Mixuebingcheng
+  - Wangzai Xiaoqiao Event
 - This mod supports the following languages:
   - English
   - Simplified and Traditional Chinese
