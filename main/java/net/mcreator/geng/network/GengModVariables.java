@@ -90,7 +90,9 @@ public class GengModVariables {
 			clone.bargaining_progress_display = original.bargaining_progress_display;
 			clone.bargaining_progress = original.bargaining_progress;
 			clone.AlreadyGetCoins = original.AlreadyGetCoins;
+			clone.headgear_eff_display = original.headgear_eff_display;
 			if (!event.isWasDeath()) {
+				clone.ddm_sound_tick = original.ddm_sound_tick;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -127,6 +129,8 @@ public class GengModVariables {
 		public boolean bargaining_progress_display = false;
 		public double bargaining_progress = 0.0;
 		public boolean AlreadyGetCoins = false;
+		public double ddm_sound_tick = 0;
+		public boolean headgear_eff_display = false;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -161,6 +165,8 @@ public class GengModVariables {
 			nbt.putBoolean("bargaining_progress_display", bargaining_progress_display);
 			nbt.putDouble("bargaining_progress", bargaining_progress);
 			nbt.putBoolean("AlreadyGetCoins", AlreadyGetCoins);
+			nbt.putDouble("ddm_sound_tick", ddm_sound_tick);
+			nbt.putBoolean("headgear_eff_display", headgear_eff_display);
 			return nbt;
 		}
 
@@ -196,6 +202,8 @@ public class GengModVariables {
 			bargaining_progress_display = nbt.getBoolean("bargaining_progress_display");
 			bargaining_progress = nbt.getDouble("bargaining_progress");
 			AlreadyGetCoins = nbt.getBoolean("AlreadyGetCoins");
+			ddm_sound_tick = nbt.getDouble("ddm_sound_tick");
+			headgear_eff_display = nbt.getBoolean("headgear_eff_display");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

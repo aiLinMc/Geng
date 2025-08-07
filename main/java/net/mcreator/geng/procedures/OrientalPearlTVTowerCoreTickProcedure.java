@@ -42,7 +42,7 @@ public class OrientalPearlTVTowerCoreTickProcedure {
 											(Math.round((z - i * (vz / 150)) * 1000) / 1000d + 0.5), 1, 0.1, 0.1, 0.1, 0);
 								i++;
 							}
-							entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("geng:kicked_out_of_shanghai")))), 50);
+							entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("geng:kicked_out_of_shanghai")))), 60);
 						} else {
 							for (int index1 = 0; index1 < 160; index1++) {
 								if (world instanceof ServerLevel _level)
@@ -51,7 +51,7 @@ public class OrientalPearlTVTowerCoreTickProcedure {
 								i++;
 							}
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 600, 1, true, false));
+								_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 600, 0, true, false));
 						}
 					} else {
 						for (int index2 = 0; index2 < 80; index2++) {

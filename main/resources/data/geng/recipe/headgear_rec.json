@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "c c"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:white_wool"
+    },
+    "b": {
+      "item": "geng:zi_er"
+    },
+    "c": {
+      "item": "minecraft:black_wool"
+    }
+  },
+  "result": {
+    "id": "geng:headgear_helmet",
+    "count": 1
+  }
+}

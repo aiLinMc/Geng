@@ -23,6 +23,7 @@ import net.mcreator.geng.world.inventory.LieDetectorTruthMenu;
 import net.mcreator.geng.world.inventory.LieDetectorLieMenu;
 import net.mcreator.geng.world.inventory.HaveAChoiceMenu;
 import net.mcreator.geng.world.inventory.ChooseFriendGuiMenu;
+import net.mcreator.geng.world.inventory.CTPGuiMenu;
 import net.mcreator.geng.network.MenuStateUpdateMessage;
 import net.mcreator.geng.GengMod;
 
@@ -38,6 +39,7 @@ public class GengModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<PxxExchangeGuiMenu>> PXX_EXCHANGE_GUI = REGISTRY.register("pxx_exchange_gui", () -> IMenuTypeExtension.create(PxxExchangeGuiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<ChooseFriendGuiMenu>> CHOOSE_FRIEND_GUI = REGISTRY.register("choose_friend_gui", () -> IMenuTypeExtension.create(ChooseFriendGuiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<PxxCraftMenu>> PXX_CRAFT = REGISTRY.register("pxx_craft", () -> IMenuTypeExtension.create(PxxCraftMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<CTPGuiMenu>> CTP_GUI = REGISTRY.register("ctp_gui", () -> IMenuTypeExtension.create(CTPGuiMenu::new));
 
 	public interface MenuAccessor {
 		Map<String, Object> getMenuState();

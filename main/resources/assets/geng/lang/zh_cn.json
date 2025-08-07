@@ -145,5 +145,20 @@
   "item.minecraft.splash_potion.effect.mixue_drink": "喷溅型蜜雪冰城",
   "item.minecraft.tipped_arrow.effect.mixue_drink": "蜜雪冰城之箭",
   "item.minecraft.lingering_potion.effect.mixue_drink": "滞留型蜜雪冰城",
-  "item.minecraft.potion.effect.mixue_drink": "蜜雪冰城"
+  "item.minecraft.potion.effect.mixue_drink": "蜜雪冰城",
+  "subtitles.how_many_zier": "几个子儿",
+  "item.geng.zi_er": "子儿",
+  "effect.geng.daodaos_mother": "岛岛的妈妈",
+  "subtitles.daodaos_mother": "岛岛的妈妈",
+  "item.geng.headgear_helmet": "头套",
+  "chat.geng.headgear": "我戴头套是希望大家更关注我的声音",
+  "subtitles.what_kind_of_presence_to_brush": "刷什么存在感",
+  "item.geng.concert_ticket_purchase": "演唱会门票购买",
+  "subtitles.why_should_talk_to_you": "你都没有给我刷100万我鸟你干什么呢",
+  "gui.geng.ctp_gui.button_268": "268",
+  "gui.geng.ctp_gui.button_768": "768",
+  "gui.geng.ctp_gui.button_468": "468",
+  "gui.geng.ctp_gui.label_ticket_stall": "票档",
+  "gui.geng.ctp_gui.button_968": "968",
+  "gui.geng.ctp_gui.button_i_wont_buy_it_anymore": "我不想买了"
 }

@@ -19,4 +19,9 @@ public class GengModSounds {
 	public static final DeferredHolder<SoundEvent, SoundEvent> HIT_VILLAGER = REGISTRY.register("hit_villager", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("geng", "hit_villager")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> TRUTH = REGISTRY.register("truth", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("geng", "truth")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> LIE = REGISTRY.register("lie", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("geng", "lie")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> HOW_MANY_ZIER = REGISTRY.register("how_many_zier", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("geng", "how_many_zier")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> DAODAOS_MOTHER = REGISTRY.register("daodaos_mother", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("geng", "daodaos_mother")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> WHAT_KIND_OF_PRESENCE_TO_BRUSH = REGISTRY.register("what_kind_of_presence_to_brush",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("geng", "what_kind_of_presence_to_brush")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> WHY_SHOULD_TALK_TO_YOU = REGISTRY.register("why_should_talk_to_you", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("geng", "why_should_talk_to_you")));
 }

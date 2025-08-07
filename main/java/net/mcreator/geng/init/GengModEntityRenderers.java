@@ -15,5 +15,6 @@ public class GengModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(GengModEntities.FLYING_SUN.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(GengModEntities.FLYING_ZI_ER.get(), ThrownItemRenderer::new);
 	}
 }

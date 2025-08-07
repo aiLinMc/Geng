@@ -22,9 +22,11 @@ public class GengModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 			tabData.accept(GengModItems.HUNDRED_TON_KING.get());
+			tabData.accept(GengModItems.SUN.get());
 			tabData.accept(GengModItems.GOLD_COIN.get());
 			tabData.accept(GengModItems.SILVER_DOLLAR.get());
 			tabData.accept(GengModItems.COPPER_COIN.get());
+			tabData.accept(GengModItems.ZI_ER.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
 			tabData.accept(GengModItems.THE_CAKE_OF_CAPITAL.get());
 			tabData.accept(GengModItems.SLICED_MELON.get());
@@ -32,11 +34,14 @@ public class GengModTabs {
 			tabData.accept(GengModItems.KNIFE_OF_HUAQIANG.get());
 			tabData.accept(GengModItems.SUN.get());
 			tabData.accept(GengModItems.PINXIXI_MACHETE.get());
+			tabData.accept(GengModItems.ZI_ER.get());
+			tabData.accept(GengModItems.HEADGEAR_HELMET.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
 			tabData.accept(GengModBlocks.MELON_STALL.get().asItem());
 			tabData.accept(GengModBlocks.PINXIXI_LOTTERY_BOX.get().asItem());
 		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(GengModItems.PUTIN.get());
+			tabData.accept(GengModItems.CONCERT_TICKET_PURCHASE.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
 			tabData.accept(GengModBlocks.ORIENTAL_PEARL_TV_TOWER_BASE.get().asItem());
 			tabData.accept(GengModBlocks.ORIENTAL_PEARL_TV_TOWER_BASE_LOWER_SPHERE.get().asItem());

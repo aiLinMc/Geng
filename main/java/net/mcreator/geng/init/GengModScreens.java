@@ -16,6 +16,7 @@ import net.mcreator.geng.client.gui.LieDetectorTruthScreen;
 import net.mcreator.geng.client.gui.LieDetectorLieScreen;
 import net.mcreator.geng.client.gui.HaveAChoiceScreen;
 import net.mcreator.geng.client.gui.ChooseFriendGuiScreen;
+import net.mcreator.geng.client.gui.CTPGuiScreen;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class GengModScreens {
@@ -29,6 +30,7 @@ public class GengModScreens {
 		event.register(GengModMenus.PXX_EXCHANGE_GUI.get(), PxxExchangeGuiScreen::new);
 		event.register(GengModMenus.CHOOSE_FRIEND_GUI.get(), ChooseFriendGuiScreen::new);
 		event.register(GengModMenus.PXX_CRAFT.get(), PxxCraftScreen::new);
+		event.register(GengModMenus.CTP_GUI.get(), CTPGuiScreen::new);
 	}
 
 	public interface ScreenAccessor {

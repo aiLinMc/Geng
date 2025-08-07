@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "aba",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:flint"
+    },
+    "b": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "result": {
+    "id": "geng:zi_er",
+    "count": 4
+  }
+}

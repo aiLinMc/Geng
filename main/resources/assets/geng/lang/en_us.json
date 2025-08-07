@@ -145,5 +145,20 @@
   "item.minecraft.splash_potion.effect.mixue_drink": "Splash Mixue Drink",
   "item.minecraft.tipped_arrow.effect.mixue_drink": "Arrow of Mixue Drink",
   "item.minecraft.lingering_potion.effect.mixue_drink": "Lingering Mixue Drink",
-  "item.minecraft.potion.effect.mixue_drink": "Mixue Drink"
+  "item.minecraft.potion.effect.mixue_drink": "Mixue Drink",
+  "subtitles.how_many_zier": "How Many Zi Er",
+  "item.geng.zi_er": "ZiEr",
+  "effect.geng.daodaos_mother": "Daodao\u0027s Mother",
+  "subtitles.daodaos_mother": "Daodao\u0027s Mother",
+  "item.geng.headgear_helmet": "Headgear",
+  "chat.geng.headgear": "I wear a headband in the hope that everyone pays more attention to my voice.",
+  "subtitles.what_kind_of_presence_to_brush": "What Kind of Presence to Brush",
+  "item.geng.concert_ticket_purchase": "Concert Ticket Purchase",
+  "subtitles.why_should_talk_to_you": "Why Should I Talk to You",
+  "gui.geng.ctp_gui.button_268": "268",
+  "gui.geng.ctp_gui.button_768": "768",
+  "gui.geng.ctp_gui.button_468": "468",
+  "gui.geng.ctp_gui.label_ticket_stall": "Ticket Stall",
+  "gui.geng.ctp_gui.button_968": "968",
+  "gui.geng.ctp_gui.button_i_wont_buy_it_anymore": "I won\u0027t buy it anymore"
 }

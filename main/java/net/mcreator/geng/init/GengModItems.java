@@ -12,6 +12,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.geng.item.ZiErItem;
 import net.mcreator.geng.item.TheCakeOfCapitalItem;
 import net.mcreator.geng.item.SunItem;
 import net.mcreator.geng.item.SlicedMelonItem;
@@ -20,9 +21,11 @@ import net.mcreator.geng.item.PutinItem;
 import net.mcreator.geng.item.PinxixiMacheteItem;
 import net.mcreator.geng.item.KnifeOfHuaqiangItem;
 import net.mcreator.geng.item.HundredTonKingItem;
+import net.mcreator.geng.item.HeadgearItem;
 import net.mcreator.geng.item.GoldCoinItem;
 import net.mcreator.geng.item.DeepseekItem;
 import net.mcreator.geng.item.CopperCoinItem;
+import net.mcreator.geng.item.ConcertTicketPurchaseItem;
 import net.mcreator.geng.item.A1Item;
 import net.mcreator.geng.GengMod;
 
@@ -47,6 +50,9 @@ public class GengModItems {
 	public static final DeferredItem<Item> ORIENTAL_PEARL_TV_TOWER_PILLAR = block(GengModBlocks.ORIENTAL_PEARL_TV_TOWER_PILLAR);
 	public static final DeferredItem<Item> ORIENTAL_PEARL_TV_TOWER_CORE = block(GengModBlocks.ORIENTAL_PEARL_TV_TOWER_CORE, new Item.Properties().rarity(Rarity.UNCOMMON));
 	public static final DeferredItem<Item> ORIENTAL_PEARL_TV_TOWER_TOP = block(GengModBlocks.ORIENTAL_PEARL_TV_TOWER_TOP);
+	public static final DeferredItem<Item> ZI_ER = REGISTRY.register("zi_er", ZiErItem::new);
+	public static final DeferredItem<Item> HEADGEAR_HELMET = REGISTRY.register("headgear_helmet", HeadgearItem.Helmet::new);
+	public static final DeferredItem<Item> CONCERT_TICKET_PURCHASE = REGISTRY.register("concert_ticket_purchase", ConcertTicketPurchaseItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

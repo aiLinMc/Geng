@@ -1,4 +1,4 @@
-This is a Minecraft mod called [Geng](https://modrinth.com/mod/geng).
+This is a Minecraft mod called Geng.
 
 This mod use [AFL-3](https://opensource.org/license/afl-3-0-php) License.
 
@@ -33,7 +33,7 @@ This mod use [AFL-3](https://opensource.org/license/afl-3-0-php) License.
 ## Frequently Asked Questions
 Q: What should I do if the mod causes the game to crash?
 
-A: Please check if there are any conflicts with other mods and submit [Issues](https://github.com/aiLinMc/Geng/issues) with crash logs attached.
+A: Please check if there are any conflicts with other mods and submit Issues with crash logs attached. Submit the bugs on the [Issues](https://github.com/aiLinMc/Geng/issues) page!
 
 Q: How to suggest new memes?
 
@@ -42,3 +42,11 @@ A: Submit your ideas on the [Issues](https://github.com/aiLinMc/Geng/issues) pag
 Q: Do you support other versions of Minecraft?
 
 A: Currently only supports 1.21.1. Unfortunately, I may only stay at that version update.
+
+
+## Sponsored Link
+If you are Chinese, please jump to [this page](https://afdian.com/a/aiLinMc) to sponsor.
+
+Sponsorship links for countries other than China have not yet been opened.
+
+**Your sponsorship is my biggest motivation for updating!**
