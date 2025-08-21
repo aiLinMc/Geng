@@ -10,6 +10,7 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.mcreator.geng.client.gui.PxxExchangeGuiScreen;
 import net.mcreator.geng.client.gui.PxxCraftScreen;
+import net.mcreator.geng.client.gui.PolarBearLocationScreen;
 import net.mcreator.geng.client.gui.PinxiLotteryBoxGuiScreen;
 import net.mcreator.geng.client.gui.MelonStallGuiScreen;
 import net.mcreator.geng.client.gui.LieDetectorTruthScreen;
@@ -31,6 +32,7 @@ public class GengModScreens {
 		event.register(GengModMenus.CHOOSE_FRIEND_GUI.get(), ChooseFriendGuiScreen::new);
 		event.register(GengModMenus.PXX_CRAFT.get(), PxxCraftScreen::new);
 		event.register(GengModMenus.CTP_GUI.get(), CTPGuiScreen::new);
+		event.register(GengModMenus.POLAR_BEAR_LOCATION.get(), PolarBearLocationScreen::new);
 	}
 
 	public interface ScreenAccessor {

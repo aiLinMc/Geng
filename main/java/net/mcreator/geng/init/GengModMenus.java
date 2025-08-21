@@ -17,6 +17,7 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.geng.world.inventory.PxxExchangeGuiMenu;
 import net.mcreator.geng.world.inventory.PxxCraftMenu;
+import net.mcreator.geng.world.inventory.PolarBearLocationMenu;
 import net.mcreator.geng.world.inventory.PinxiLotteryBoxGuiMenu;
 import net.mcreator.geng.world.inventory.MelonStallGuiMenu;
 import net.mcreator.geng.world.inventory.LieDetectorTruthMenu;
@@ -40,6 +41,7 @@ public class GengModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<ChooseFriendGuiMenu>> CHOOSE_FRIEND_GUI = REGISTRY.register("choose_friend_gui", () -> IMenuTypeExtension.create(ChooseFriendGuiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<PxxCraftMenu>> PXX_CRAFT = REGISTRY.register("pxx_craft", () -> IMenuTypeExtension.create(PxxCraftMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<CTPGuiMenu>> CTP_GUI = REGISTRY.register("ctp_gui", () -> IMenuTypeExtension.create(CTPGuiMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<PolarBearLocationMenu>> POLAR_BEAR_LOCATION = REGISTRY.register("polar_bear_location", () -> IMenuTypeExtension.create(PolarBearLocationMenu::new));
 
 	public interface MenuAccessor {
 		Map<String, Object> getMenuState();

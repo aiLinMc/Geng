@@ -13,7 +13,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.geng.procedures.PinxixiMacheteInHandProcedure;
-import net.mcreator.geng.procedures.BargainingProgressTxtProcedure;
 import net.mcreator.geng.procedures.BargainingProgressTxt2Procedure;
 
 @EventBusSubscriber({Dist.CLIENT})
@@ -37,11 +36,7 @@ public class BargainProgressDisplayOverlay {
 			if (PinxixiMacheteInHandProcedure.execute(entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-						BargainingProgressTxtProcedure.execute(entity), w / 2 + 9, h / 2 + 5, -65536, false);
-			if (PinxixiMacheteInHandProcedure.execute(entity))
-				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
-
-						BargainingProgressTxt2Procedure.execute(entity), w / 2 + 9, h / 2 + 19, -65536, false);
+						BargainingProgressTxt2Procedure.execute(entity), w / 2 + 7, h / 2 + 7, -65536, false);
 		}
 	}
 }

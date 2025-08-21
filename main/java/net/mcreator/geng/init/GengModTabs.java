@@ -30,6 +30,11 @@ public class GengModTabs {
 		} else if (tabData.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
 			tabData.accept(GengModItems.THE_CAKE_OF_CAPITAL.get());
 			tabData.accept(GengModItems.SLICED_MELON.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+			tabData.accept(GengModItems.DEEPSEEK.get());
+			tabData.accept(GengModItems.PUTIN.get());
+			tabData.accept(GengModItems.CONCERT_TICKET_PURCHASE.get());
+			tabData.accept(GengModItems.POLAR_BEAR_SADDLE.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(GengModItems.KNIFE_OF_HUAQIANG.get());
 			tabData.accept(GengModItems.SUN.get());
@@ -39,15 +44,14 @@ public class GengModTabs {
 		} else if (tabData.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
 			tabData.accept(GengModBlocks.MELON_STALL.get().asItem());
 			tabData.accept(GengModBlocks.PINXIXI_LOTTERY_BOX.get().asItem());
-		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-			tabData.accept(GengModItems.PUTIN.get());
-			tabData.accept(GengModItems.CONCERT_TICKET_PURCHASE.get());
+			tabData.accept(GengModBlocks.DESK.get().asItem());
 		} else if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
 			tabData.accept(GengModBlocks.ORIENTAL_PEARL_TV_TOWER_BASE.get().asItem());
 			tabData.accept(GengModBlocks.ORIENTAL_PEARL_TV_TOWER_BASE_LOWER_SPHERE.get().asItem());
 			tabData.accept(GengModBlocks.ORIENTAL_PEARL_TV_TOWER_PILLAR.get().asItem());
 			tabData.accept(GengModBlocks.ORIENTAL_PEARL_TV_TOWER_CORE.get().asItem());
 			tabData.accept(GengModBlocks.ORIENTAL_PEARL_TV_TOWER_TOP.get().asItem());
+			tabData.accept(GengModBlocks.DESK.get().asItem());
 		}
 	}
 }

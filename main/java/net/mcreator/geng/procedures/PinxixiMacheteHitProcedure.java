@@ -76,7 +76,7 @@ public class PinxixiMacheteHitProcedure {
 		} else {
 			if (Mth.nextInt(RandomSource.create(), 1, 5) == 3 && !sourceentity.getData(GengModVariables.PLAYER_VARIABLES).AlreadyGetCoins && !hasEntityInInventory(sourceentity, new ItemStack(GengModItems.GOLD_COIN.get()))) {
 				if (sourceentity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal((Component.translatable("translation.key.message.004").getString())), false);
+					_player.displayClientMessage(Component.literal((Component.translatable("chat.geng.pxx.machete_success").getString())), false);
 				{
 					GengModVariables.PlayerVariables _vars = sourceentity.getData(GengModVariables.PLAYER_VARIABLES);
 					_vars.AlreadyGetCoins = true;
@@ -99,7 +99,7 @@ public class PinxixiMacheteHitProcedure {
 					_vars.syncPlayerVariables(sourceentity);
 				}
 				if (sourceentity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal((Component.translatable("translation.key.message.003").getString())), false);
+					_player.displayClientMessage(Component.literal((Component.translatable("chat.geng.pxx.network_problem").getString())), false);
 			} else {
 				{
 					GengModVariables.PlayerVariables _vars = sourceentity.getData(GengModVariables.PLAYER_VARIABLES);
@@ -107,7 +107,7 @@ public class PinxixiMacheteHitProcedure {
 					_vars.syncPlayerVariables(sourceentity);
 				}
 				if (sourceentity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal((Component.translatable("translation.key.message.002").getString())), false);
+					_player.displayClientMessage(Component.literal((Component.translatable("chat.geng.pxx.network_slow").getString())), false);
 			}
 		}
 		if (sourceentity.getData(GengModVariables.PLAYER_VARIABLES).PxxHitNum >= 300) {

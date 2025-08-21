@@ -17,7 +17,7 @@ public class PutinTxtProcedure {
 				_vars.syncPlayerVariables(entity);
 			}
 		}
-		return Component.translatable("translation.putin.info.click").getString() + "\n" + Component.translatable("translation.putin.info.mode").getString() + "\u00A75"
-				+ Component.translatable(("translation.putin.info." + entity.getData(GengModVariables.PLAYER_VARIABLES).PutinMode)).getString();
+		return Component.translatable("item.geng.putin.description.click").getString() + "\n" + Component.translatable("item.geng.putin.description.mode").getString() + "\u00A75"
+				+ Component.translatable(("item.geng.putin.description." + entity.getData(GengModVariables.PLAYER_VARIABLES).PutinMode)).getString();
 	}
 }

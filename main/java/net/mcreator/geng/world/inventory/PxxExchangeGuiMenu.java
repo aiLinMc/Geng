@@ -15,7 +15,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.geng.procedures.PxxExchangeGuiCloseProcedure;
 import net.mcreator.geng.init.GengModMenus;
 
 import java.util.function.Supplier;
@@ -74,12 +73,6 @@ public class PxxExchangeGuiMenu extends AbstractContainerMenu implements GengMod
 	@Override
 	public ItemStack quickMoveStack(Player playerIn, int index) {
 		return ItemStack.EMPTY;
-	}
-
-	@Override
-	public void removed(Player playerIn) {
-		super.removed(playerIn);
-		PxxExchangeGuiCloseProcedure.execute(entity);
 	}
 
 	@Override

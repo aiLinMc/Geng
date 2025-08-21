@@ -60,29 +60,14 @@ public class GengModVariables {
 		public static void clonePlayer(PlayerEvent.Clone event) {
 			PlayerVariables original = event.getOriginal().getData(PLAYER_VARIABLES);
 			PlayerVariables clone = new PlayerVariables();
-			clone.z02 = original.z02;
-			clone.z01 = original.z01;
-			clone.y02 = original.y02;
-			clone.y01 = original.y01;
-			clone.x02 = original.x02;
-			clone.x01 = original.x01;
 			clone.uuid01 = original.uuid01;
 			clone.txt02 = original.txt02;
-			clone.txt01 = original.txt01;
-			clone.Sweet = original.Sweet;
 			clone.SilverDollarNum = original.SilverDollarNum;
 			clone.randomPxx = original.randomPxx;
-			clone.random1 = original.random1;
 			clone.PxxHitNum = original.PxxHitNum;
 			clone.PutinMode = original.PutinMode;
-			clone.num7 = original.num7;
 			clone.num6 = original.num6;
-			clone.num5 = original.num5;
-			clone.num4 = original.num4;
-			clone.num3 = original.num3;
 			clone.num2 = original.num2;
-			clone.num1 = original.num1;
-			clone.lie = original.lie;
 			clone.InLottery = original.InLottery;
 			clone.InChoiceGui = original.InChoiceGui;
 			clone.CopperCoinNum = original.CopperCoinNum;
@@ -91,6 +76,9 @@ public class GengModVariables {
 			clone.bargaining_progress = original.bargaining_progress;
 			clone.AlreadyGetCoins = original.AlreadyGetCoins;
 			clone.headgear_eff_display = original.headgear_eff_display;
+			clone.polar_bear_x = original.polar_bear_x;
+			clone.polar_bear_y = original.polar_bear_y;
+			clone.polar_bear_z = original.polar_bear_z;
 			if (!event.isWasDeath()) {
 				clone.ddm_sound_tick = original.ddm_sound_tick;
 			}
@@ -99,29 +87,14 @@ public class GengModVariables {
 	}
 
 	public static class PlayerVariables implements INBTSerializable<CompoundTag> {
-		public double z02 = 0.0;
-		public double z01 = 0.0;
-		public double y02 = 0.0;
-		public double y01 = 0.0;
-		public double x02 = 0.0;
-		public double x01 = 0.0;
 		public String uuid01 = "";
 		public String txt02 = "";
-		public String txt01 = "";
-		public double Sweet = 0.0;
 		public double SilverDollarNum = 0;
 		public double randomPxx = 0.0;
-		public double random1 = 0.0;
 		public double PxxHitNum = 0.0;
 		public String PutinMode = "reset";
-		public double num7 = 0;
 		public double num6 = 0.0;
-		public double num5 = 0.0;
-		public double num4 = 0.0;
-		public double num3 = 0.0;
 		public double num2 = 0.0;
-		public double num1 = 0.0;
-		public boolean lie = false;
 		public boolean InLottery = false;
 		public boolean InChoiceGui = false;
 		public double CopperCoinNum = 0;
@@ -131,33 +104,21 @@ public class GengModVariables {
 		public boolean AlreadyGetCoins = false;
 		public double ddm_sound_tick = 0;
 		public boolean headgear_eff_display = false;
+		public double polar_bear_x = 0;
+		public double polar_bear_y = 0;
+		public double polar_bear_z = 0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
 			CompoundTag nbt = new CompoundTag();
-			nbt.putDouble("z02", z02);
-			nbt.putDouble("z01", z01);
-			nbt.putDouble("y02", y02);
-			nbt.putDouble("y01", y01);
-			nbt.putDouble("x02", x02);
-			nbt.putDouble("x01", x01);
 			nbt.putString("uuid01", uuid01);
 			nbt.putString("txt02", txt02);
-			nbt.putString("txt01", txt01);
-			nbt.putDouble("Sweet", Sweet);
 			nbt.putDouble("SilverDollarNum", SilverDollarNum);
 			nbt.putDouble("randomPxx", randomPxx);
-			nbt.putDouble("random1", random1);
 			nbt.putDouble("PxxHitNum", PxxHitNum);
 			nbt.putString("PutinMode", PutinMode);
-			nbt.putDouble("num7", num7);
 			nbt.putDouble("num6", num6);
-			nbt.putDouble("num5", num5);
-			nbt.putDouble("num4", num4);
-			nbt.putDouble("num3", num3);
 			nbt.putDouble("num2", num2);
-			nbt.putDouble("num1", num1);
-			nbt.putBoolean("lie", lie);
 			nbt.putBoolean("InLottery", InLottery);
 			nbt.putBoolean("InChoiceGui", InChoiceGui);
 			nbt.putDouble("CopperCoinNum", CopperCoinNum);
@@ -167,34 +128,22 @@ public class GengModVariables {
 			nbt.putBoolean("AlreadyGetCoins", AlreadyGetCoins);
 			nbt.putDouble("ddm_sound_tick", ddm_sound_tick);
 			nbt.putBoolean("headgear_eff_display", headgear_eff_display);
+			nbt.putDouble("polar_bear_x", polar_bear_x);
+			nbt.putDouble("polar_bear_y", polar_bear_y);
+			nbt.putDouble("polar_bear_z", polar_bear_z);
 			return nbt;
 		}
 
 		@Override
 		public void deserializeNBT(HolderLookup.Provider lookupProvider, CompoundTag nbt) {
-			z02 = nbt.getDouble("z02");
-			z01 = nbt.getDouble("z01");
-			y02 = nbt.getDouble("y02");
-			y01 = nbt.getDouble("y01");
-			x02 = nbt.getDouble("x02");
-			x01 = nbt.getDouble("x01");
 			uuid01 = nbt.getString("uuid01");
 			txt02 = nbt.getString("txt02");
-			txt01 = nbt.getString("txt01");
-			Sweet = nbt.getDouble("Sweet");
 			SilverDollarNum = nbt.getDouble("SilverDollarNum");
 			randomPxx = nbt.getDouble("randomPxx");
-			random1 = nbt.getDouble("random1");
 			PxxHitNum = nbt.getDouble("PxxHitNum");
 			PutinMode = nbt.getString("PutinMode");
-			num7 = nbt.getDouble("num7");
 			num6 = nbt.getDouble("num6");
-			num5 = nbt.getDouble("num5");
-			num4 = nbt.getDouble("num4");
-			num3 = nbt.getDouble("num3");
 			num2 = nbt.getDouble("num2");
-			num1 = nbt.getDouble("num1");
-			lie = nbt.getBoolean("lie");
 			InLottery = nbt.getBoolean("InLottery");
 			InChoiceGui = nbt.getBoolean("InChoiceGui");
 			CopperCoinNum = nbt.getDouble("CopperCoinNum");
@@ -204,6 +153,9 @@ public class GengModVariables {
 			AlreadyGetCoins = nbt.getBoolean("AlreadyGetCoins");
 			ddm_sound_tick = nbt.getDouble("ddm_sound_tick");
 			headgear_eff_display = nbt.getBoolean("headgear_eff_display");
+			polar_bear_x = nbt.getDouble("polar_bear_x");
+			polar_bear_y = nbt.getDouble("polar_bear_y");
+			polar_bear_z = nbt.getDouble("polar_bear_z");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

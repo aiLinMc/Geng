@@ -48,13 +48,13 @@ public class SendInviteProcedure {
 								new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(), _ent.getDisplayName(),
 										_ent.level().getServer(), _ent),
 								("/tellraw " + ((entity instanceof Player _entity && _entity.containerMenu instanceof GengModMenus.MenuAccessor _menu8) ? _menu8.getMenuState(0, "FriendName", "") : "") + " {\"text\":\""
-										+ entity.getDisplayName().getString() + Component.translatable("translation.key.message.invite").getString() + "\",\"color\":\"yellow\"}"));
+										+ entity.getDisplayName().getString() + Component.translatable("chat.geng.pxx.invite").getString() + "\",\"color\":\"yellow\"}"));
 					}
 				}
 			}
 		} else {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal((Component.translatable("translation.key.message.not_enough_coins").getString())), false);
+				_player.displayClientMessage(Component.literal((Component.translatable("chat.geng.pxx.not_enough_coins").getString())), false);
 		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();

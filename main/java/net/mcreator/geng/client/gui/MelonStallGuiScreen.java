@@ -9,7 +9,6 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.geng.world.inventory.MelonStallGuiMenu;
-import net.mcreator.geng.procedures.MelonStallGuiTxtProcedure;
 import net.mcreator.geng.init.GengModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -66,7 +65,7 @@ public class MelonStallGuiScreen extends AbstractContainerScreen<MelonStallGuiMe
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, MelonStallGuiTxtProcedure.execute(), 7, 6, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.geng.melon_stall_gui.label_proc_melon_stall_gui_txt"), 7, 6, -12829636, false);
 	}
 
 	@Override

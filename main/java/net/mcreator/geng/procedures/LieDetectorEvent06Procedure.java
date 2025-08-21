@@ -41,7 +41,7 @@ public class LieDetectorEvent06Procedure {
 		if (world.getLevelData().getGameRules().getBoolean(GengModGameRules.LIE_DETECTOR_MODE)) {
 			{
 				GengModVariables.PlayerVariables _vars = sourceentity.getData(GengModVariables.PLAYER_VARIABLES);
-				_vars.txt02 = Component.translatable("translation.key.choice.06").getString();
+				_vars.txt02 = Component.translatable("gui.geng.lie_detector.choice.06").getString();
 				_vars.syncPlayerVariables(sourceentity);
 			}
 			if (sourceentity instanceof ServerPlayer _ent) {

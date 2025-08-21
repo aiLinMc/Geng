@@ -26,8 +26,8 @@ public class ResourceDepletionOverProcedure {
 			return;
 		if (entity.getData(GengModVariables.PLAYER_VARIABLES).num6 == 1 && !(getEntityGameType(entity) == GameType.CREATIVE)) {
 			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), ("/tellraw "
-						+ entity.getDisplayName().getString() + " \"<\u00A74" + Component.translatable("translation.key.name.002").getString() + "\u00A7f> \u00A7e" + Component.translatable("translation.key.name.009").getString() + "\""));
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						("/tellraw " + entity.getDisplayName().getString() + " \"<\u00A74" + Component.translatable("chat.geng.capital").getString() + "\u00A7f> \u00A7e" + Component.translatable("chat.geng.capital.rescission").getString() + "\""));
 			GengMod.queueServerWork(4, () -> {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(GengModMobEffects.RESOURCE_DEPLETION, 3600, (int) entity.getData(GengModVariables.PLAYER_VARIABLES).num2));

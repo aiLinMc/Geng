@@ -31,11 +31,6 @@ public class ChoiceCloseProcedure {
 		if (entity instanceof Player _player)
 			_player.closeContainer();
 		if (Mth.nextInt(RandomSource.create(), 1, 2) == 1) {
-			{
-				GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);
-				_vars.lie = false;
-				_vars.syncPlayerVariables(entity);
-			}
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				_ent.openMenu(new MenuProvider() {
@@ -56,11 +51,6 @@ public class ChoiceCloseProcedure {
 				}, _bpos);
 			}
 		} else {
-			{
-				GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);
-				_vars.lie = true;
-				_vars.syncPlayerVariables(entity);
-			}
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				_ent.openMenu(new MenuProvider() {

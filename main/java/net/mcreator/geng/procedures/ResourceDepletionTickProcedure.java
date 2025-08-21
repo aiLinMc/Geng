@@ -33,6 +33,12 @@ public class ResourceDepletionTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		double px = 0;
+		double py = 0;
+		double pz = 0;
+		double randint_mob = 0;
+		double randint_durability = 0;
+		double randint_itemstack = 0;
 		if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(GengModMobEffects.RESOURCE_DEPLETION) ? _livEnt.getEffect(GengModMobEffects.RESOURCE_DEPLETION).getDuration() : 0) < 60) {
 			{
 				GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);
@@ -64,48 +70,32 @@ public class ResourceDepletionTickProcedure {
 		}
 		if (Mth.nextInt(RandomSource.create(), 0, 350 - 8 * (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(GengModMobEffects.RESOURCE_DEPLETION) ? _livEnt.getEffect(GengModMobEffects.RESOURCE_DEPLETION).getAmplifier() : 0)) == 150) {
 			for (int index1 = 0; index1 < Mth.nextInt(RandomSource.create(), 1, 3); index1++) {
-				{
-					GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);
-					_vars.num4 = Math.random();
-					_vars.syncPlayerVariables(entity);
+				randint_durability = Math.random();
+				while (randint_durability > 0.4 || randint_durability <= 0.01) {
+					randint_durability = Math.random();
 				}
-				while (entity.getData(GengModVariables.PLAYER_VARIABLES).num4 > 0.4 || entity.getData(GengModVariables.PLAYER_VARIABLES).num4 <= 0.01) {
-					{
-						GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);
-						_vars.num4 = Math.random();
-						_vars.syncPlayerVariables(entity);
-					}
-				}
-				{
-					GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);
-					_vars.num3 = Mth.nextInt(RandomSource.create(), 0, 35);
-					_vars.syncPlayerVariables(entity);
-				}
-				if (!((entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler19 ? _modHandler19.getStackInSlot((int) entity.getData(GengModVariables.PLAYER_VARIABLES).num3).copy() : ItemStack.EMPTY)
-						.isDamageableItem())) {
+				randint_itemstack = Mth.nextInt(RandomSource.create(), 0, 35);
+				if (!((entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler19 ? _modHandler19.getStackInSlot((int) randint_itemstack).copy() : ItemStack.EMPTY).isDamageableItem())) {
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-								("/tellraw " + entity.getDisplayName().getString() + " \"<\u00A74" + Component.translatable("translation.key.name.002").getString() + "\u00A7f> \u00A7e" + Component.translatable("translation.key.name.003").getString()
-										+ "\""));
+								("/tellraw " + entity.getDisplayName().getString() + " \"<\u00A74" + Component.translatable("chat.geng.capital").getString() + "\u00A7f> \u00A7e"
+										+ Component.translatable("chat.geng.capital.change_item_quantity").getString() + "\""));
 					if (entity instanceof Player _player) {
-						ItemStack _stktoremove = (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler25
-								? _modHandler25.getStackInSlot((int) entity.getData(GengModVariables.PLAYER_VARIABLES).num3).copy()
-								: ItemStack.EMPTY);
+						ItemStack _stktoremove = (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler25 ? _modHandler25.getStackInSlot((int) randint_itemstack).copy() : ItemStack.EMPTY);
 						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 					}
 				} else {
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-								("/tellraw " + entity.getDisplayName().getString() + " \"<\u00A74" + Component.translatable("translation.key.name.002").getString() + "\u00A7f> \u00A7e" + Component.translatable("translation.key.name.004").getString()
-										+ "\""));
+								("/tellraw " + entity.getDisplayName().getString() + " \"<\u00A74" + Component.translatable("chat.geng.capital").getString() + "\u00A7f> \u00A7e"
+										+ Component.translatable("chat.geng.capital.change_item_durability_value").getString() + "\""));
 					{
 						Entity _ent = entity;
 						if (!_ent.level().isClientSide() && _ent.getServer() != null) {
 							_ent.getServer().getCommands().performPrefixedCommand(
 									new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(), _ent.getDisplayName(),
 											_ent.level().getServer(), _ent),
-									("execute as " + entity.getDisplayName().getString() + " run item modify entity @s container." + Math.round(entity.getData(GengModVariables.PLAYER_VARIABLES).num3) + " {\"function\":\"set_damage\",\"damage\":"
-											+ entity.getData(GengModVariables.PLAYER_VARIABLES).num4 + "}"));
+									("execute as " + entity.getDisplayName().getString() + " run item modify entity @s container." + randint_itemstack + " {\"function\":\"set_damage\",\"damage\":" + randint_durability + "}"));
 						}
 					}
 					break;
@@ -114,8 +104,8 @@ public class ResourceDepletionTickProcedure {
 		}
 		if (Mth.nextInt(RandomSource.create(), 0, 420 - 10 * (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(GengModMobEffects.RESOURCE_DEPLETION) ? _livEnt.getEffect(GengModMobEffects.RESOURCE_DEPLETION).getAmplifier() : 0)) == 150) {
 			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), ("/tellraw "
-						+ entity.getDisplayName().getString() + " \"<\u00A74" + Component.translatable("translation.key.name.002").getString() + "\u00A7f> \u00A7e" + Component.translatable("translation.key.name.005").getString() + "\""));
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						("/tellraw " + entity.getDisplayName().getString() + " \"<\u00A74" + Component.translatable("chat.geng.capital").getString() + "\u00A7f> \u00A7e" + Component.translatable("chat.geng.capital.thunder").getString() + "\""));
 			if (world instanceof ServerLevel _level) {
 				LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
 				entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(x, y, z)));;
@@ -124,21 +114,17 @@ public class ResourceDepletionTickProcedure {
 		}
 		if (Mth.nextInt(RandomSource.create(), 0, 500 - 12 * (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(GengModMobEffects.RESOURCE_DEPLETION) ? _livEnt.getEffect(GengModMobEffects.RESOURCE_DEPLETION).getAmplifier() : 0)) == 150) {
 			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), ("/tellraw "
-						+ entity.getDisplayName().getString() + " \"<\u00A74" + Component.translatable("translation.key.name.002").getString() + "\u00A7f> \u00A7e" + Component.translatable("translation.key.name.008").getString() + "\""));
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						("/tellraw " + entity.getDisplayName().getString() + " \"<\u00A74" + Component.translatable("chat.geng.capital").getString() + "\u00A7f> \u00A7e" + Component.translatable("chat.geng.capital.tnt").getString() + "\""));
 			if (world instanceof Level _level && !_level.isClientSide())
 				_level.explode(null, x, y, z, 2, Level.ExplosionInteraction.NONE);
 		}
 		if (Mth.nextInt(RandomSource.create(), 0, 900 - 30 * (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(GengModMobEffects.RESOURCE_DEPLETION) ? _livEnt.getEffect(GengModMobEffects.RESOURCE_DEPLETION).getAmplifier() : 0)) == 150) {
-			{
-				GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);
-				_vars.num5 = Mth.nextInt(RandomSource.create(), 1, 7);
-				_vars.syncPlayerVariables(entity);
-			}
+			randint_mob = Mth.nextInt(RandomSource.create(), 1, 7);
 			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), ("/tellraw "
-						+ entity.getDisplayName().getString() + " \"<\u00A74" + Component.translatable("translation.key.name.002").getString() + "\u00A7f> \u00A7e" + Component.translatable("translation.key.name.006").getString() + "\""));
-			if (entity.getData(GengModVariables.PLAYER_VARIABLES).num5 == 1) {
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						("/tellraw " + entity.getDisplayName().getString() + " \"<\u00A74" + Component.translatable("chat.geng.capital").getString() + "\u00A7f> \u00A7e" + Component.translatable("chat.geng.capital.mob_summon").getString() + "\""));
+			if (randint_mob == 1) {
 				for (int index3 = 0; index3 < Mth.nextInt(RandomSource.create(), 5, 9); index3++) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = EntityType.HUSK.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
@@ -154,7 +140,7 @@ public class ResourceDepletionTickProcedure {
 						}
 					}
 				}
-			} else if (entity.getData(GengModVariables.PLAYER_VARIABLES).num5 == 2) {
+			} else if (randint_mob == 2) {
 				for (int index4 = 0; index4 < Mth.nextInt(RandomSource.create(), 1, 4); index4++) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = EntityType.CREEPER.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
@@ -170,7 +156,7 @@ public class ResourceDepletionTickProcedure {
 						}
 					}
 				}
-			} else if (entity.getData(GengModVariables.PLAYER_VARIABLES).num5 == 3) {
+			} else if (randint_mob == 3) {
 				for (int index5 = 0; index5 < Mth.nextInt(RandomSource.create(), 2, 5); index5++) {
 					{
 						Entity _ent = entity;
@@ -187,7 +173,7 @@ public class ResourceDepletionTickProcedure {
 						}
 					}
 				}
-			} else if (entity.getData(GengModVariables.PLAYER_VARIABLES).num5 == 4) {
+			} else if (randint_mob == 4) {
 				for (int index6 = 0; index6 < Mth.nextInt(RandomSource.create(), 7, 14); index6++) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = EntityType.SILVERFISH.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
@@ -203,7 +189,7 @@ public class ResourceDepletionTickProcedure {
 						}
 					}
 				}
-			} else if (entity.getData(GengModVariables.PLAYER_VARIABLES).num5 == 5) {
+			} else if (randint_mob == 5) {
 				for (int index7 = 0; index7 < Mth.nextInt(RandomSource.create(), 3, 6); index7++) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = EntityType.SKELETON.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
@@ -226,7 +212,7 @@ public class ResourceDepletionTickProcedure {
 						}
 					}
 				}
-			} else if (entity.getData(GengModVariables.PLAYER_VARIABLES).num5 == 6) {
+			} else if (randint_mob == 6) {
 				for (int index8 = 0; index8 < Mth.nextInt(RandomSource.create(), 2, 4); index8++) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = EntityType.BLAZE.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
@@ -260,78 +246,41 @@ public class ResourceDepletionTickProcedure {
 		}
 		if (Mth.nextInt(RandomSource.create(), 0, 530 - 30 * (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(GengModMobEffects.RESOURCE_DEPLETION) ? _livEnt.getEffect(GengModMobEffects.RESOURCE_DEPLETION).getAmplifier() : 0)) == 50) {
 			for (int index9 = 0; index9 < 1440; index9++) {
-				{
-					GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);
-					_vars.x01 = Mth.nextInt(RandomSource.create(), -4, 4);
-					_vars.syncPlayerVariables(entity);
-				}
-				{
-					GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);
-					_vars.y01 = Mth.nextInt(RandomSource.create(), -4, 4);
-					_vars.syncPlayerVariables(entity);
-				}
-				{
-					GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);
-					_vars.z01 = Mth.nextInt(RandomSource.create(), -4, 4);
-					_vars.syncPlayerVariables(entity);
-				}
-				if (itemFromBlockInventory(world, BlockPos.containing(x + entity.getData(GengModVariables.PLAYER_VARIABLES).x01, y + entity.getData(GengModVariables.PLAYER_VARIABLES).y01, z + entity.getData(GengModVariables.PLAYER_VARIABLES).z01), 0)
-						.getCount() != 0) {
+				px = Mth.nextInt(RandomSource.create(), -4, 4);
+				py = Mth.nextInt(RandomSource.create(), -4, 4);
+				pz = Mth.nextInt(RandomSource.create(), -4, 4);
+				if (itemFromBlockInventory(world, BlockPos.containing(x + px, y + py, z + pz), 0).getCount() != 0) {
 					if (world instanceof ServerLevel _level)
 						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-								("/tellraw " + entity.getDisplayName().getString() + " \"<\u00A74" + Component.translatable("translation.key.name.002").getString() + "\u00A7f> \u00A7e" + Component.translatable("translation.key.name.007").getString()
+								("/tellraw " + entity.getDisplayName().getString() + " \"<\u00A74" + Component.translatable("chat.geng.capital").getString() + "\u00A7f> \u00A7e" + Component.translatable("chat.geng.capital.box_items").getString()
 										+ "\""));
-					if ((world.getBlockState(BlockPos.containing(x + entity.getData(GengModVariables.PLAYER_VARIABLES).x01, y + entity.getData(GengModVariables.PLAYER_VARIABLES).y01, z + entity.getData(GengModVariables.PLAYER_VARIABLES).z01)))
-							.getBlock() == Blocks.HOPPER) {
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK,
-								BlockPos.containing(x + entity.getData(GengModVariables.PLAYER_VARIABLES).x01, y + entity.getData(GengModVariables.PLAYER_VARIABLES).y01, z + entity.getData(GengModVariables.PLAYER_VARIABLES).z01),
-								null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					if ((world.getBlockState(BlockPos.containing(x + px, y + py, z + pz))).getBlock() == Blocks.HOPPER) {
+						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x + px, y + py, z + pz), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 							int _slotid = Mth.nextInt(RandomSource.create(), 0, 4);
 							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
 							_stk.shrink(Mth.nextInt(RandomSource.create(), 2, 6));
 							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 						}
-					} else if ((world.getBlockState(BlockPos.containing(x + entity.getData(GengModVariables.PLAYER_VARIABLES).x01, y + entity.getData(GengModVariables.PLAYER_VARIABLES).y01, z + entity.getData(GengModVariables.PLAYER_VARIABLES).z01)))
-							.getBlock() == Blocks.SMOKER
-							|| (world.getBlockState(BlockPos.containing(x + entity.getData(GengModVariables.PLAYER_VARIABLES).x01, y + entity.getData(GengModVariables.PLAYER_VARIABLES).y01, z + entity.getData(GengModVariables.PLAYER_VARIABLES).z01)))
-									.getBlock() == Blocks.BLAST_FURNACE
-							|| (world.getBlockState(BlockPos.containing(x + entity.getData(GengModVariables.PLAYER_VARIABLES).x01, y + entity.getData(GengModVariables.PLAYER_VARIABLES).y01, z + entity.getData(GengModVariables.PLAYER_VARIABLES).z01)))
-									.getBlock() == Blocks.FURNACE) {
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK,
-								BlockPos.containing(x + entity.getData(GengModVariables.PLAYER_VARIABLES).x01, y + entity.getData(GengModVariables.PLAYER_VARIABLES).y01, z + entity.getData(GengModVariables.PLAYER_VARIABLES).z01),
-								null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					} else if ((world.getBlockState(BlockPos.containing(x + px, y + py, z + pz))).getBlock() == Blocks.SMOKER || (world.getBlockState(BlockPos.containing(x + px, y + py, z + pz))).getBlock() == Blocks.BLAST_FURNACE
+							|| (world.getBlockState(BlockPos.containing(x + px, y + py, z + pz))).getBlock() == Blocks.FURNACE) {
+						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x + px, y + py, z + pz), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 							int _slotid = Mth.nextInt(RandomSource.create(), 0, 2);
 							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
 							_stk.shrink(Mth.nextInt(RandomSource.create(), 2, 6));
 							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 						}
-					} else if ((world.getBlockState(BlockPos.containing(x + entity.getData(GengModVariables.PLAYER_VARIABLES).x01, y + entity.getData(GengModVariables.PLAYER_VARIABLES).y01, z + entity.getData(GengModVariables.PLAYER_VARIABLES).z01)))
-							.getBlock() == Blocks.DISPENSER
-							|| (world.getBlockState(BlockPos.containing(x + entity.getData(GengModVariables.PLAYER_VARIABLES).x01, y + entity.getData(GengModVariables.PLAYER_VARIABLES).y01, z + entity.getData(GengModVariables.PLAYER_VARIABLES).z01)))
-									.getBlock() == Blocks.DROPPER) {
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK,
-								BlockPos.containing(x + entity.getData(GengModVariables.PLAYER_VARIABLES).x01, y + entity.getData(GengModVariables.PLAYER_VARIABLES).y01, z + entity.getData(GengModVariables.PLAYER_VARIABLES).z01),
-								null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					} else if ((world.getBlockState(BlockPos.containing(x + px, y + py, z + pz))).getBlock() == Blocks.DISPENSER || (world.getBlockState(BlockPos.containing(x + px, y + py, z + pz))).getBlock() == Blocks.DROPPER) {
+						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x + px, y + py, z + pz), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 							int _slotid = Mth.nextInt(RandomSource.create(), 0, 8);
 							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
 							_stk.shrink(Mth.nextInt(RandomSource.create(), 2, 6));
 							_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
 						}
-					} else if ((world.getBlockState(BlockPos.containing(x + entity.getData(GengModVariables.PLAYER_VARIABLES).x01, y + entity.getData(GengModVariables.PLAYER_VARIABLES).y01, z + entity.getData(GengModVariables.PLAYER_VARIABLES).z01)))
-							.getBlock() == Blocks.BARREL
-							|| (world.getBlockState(BlockPos.containing(x + entity.getData(GengModVariables.PLAYER_VARIABLES).x01, y + entity.getData(GengModVariables.PLAYER_VARIABLES).y01, z + entity.getData(GengModVariables.PLAYER_VARIABLES).z01)))
-									.getBlock() == Blocks.CHEST
-							|| (world.getBlockState(BlockPos.containing(x + entity.getData(GengModVariables.PLAYER_VARIABLES).x01, y + entity.getData(GengModVariables.PLAYER_VARIABLES).y01, z + entity.getData(GengModVariables.PLAYER_VARIABLES).z01)))
-									.getBlock() == Blocks.TRAPPED_CHEST
-							|| (BuiltInRegistries.BLOCK.getKey((world
-									.getBlockState(BlockPos.containing(x + entity.getData(GengModVariables.PLAYER_VARIABLES).x01, y + entity.getData(GengModVariables.PLAYER_VARIABLES).y01, z + entity.getData(GengModVariables.PLAYER_VARIABLES).z01)))
-									.getBlock()).toString()).contains("box")
-									&& (BuiltInRegistries.BLOCK.getKey((world.getBlockState(
-											BlockPos.containing(x + entity.getData(GengModVariables.PLAYER_VARIABLES).x01, y + entity.getData(GengModVariables.PLAYER_VARIABLES).y01, z + entity.getData(GengModVariables.PLAYER_VARIABLES).z01)))
-											.getBlock()).toString()).contains("shul")) {
-						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK,
-								BlockPos.containing(x + entity.getData(GengModVariables.PLAYER_VARIABLES).x01, y + entity.getData(GengModVariables.PLAYER_VARIABLES).y01, z + entity.getData(GengModVariables.PLAYER_VARIABLES).z01),
-								null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+					} else if ((world.getBlockState(BlockPos.containing(x + px, y + py, z + pz))).getBlock() == Blocks.BARREL || (world.getBlockState(BlockPos.containing(x + px, y + py, z + pz))).getBlock() == Blocks.CHEST
+							|| (world.getBlockState(BlockPos.containing(x + px, y + py, z + pz))).getBlock() == Blocks.TRAPPED_CHEST
+							|| (BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x + px, y + py, z + pz))).getBlock()).toString()).contains("box")
+									&& (BuiltInRegistries.BLOCK.getKey((world.getBlockState(BlockPos.containing(x + px, y + py, z + pz))).getBlock()).toString()).contains("shul")) {
+						if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x + px, y + py, z + pz), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 							int _slotid = Mth.nextInt(RandomSource.create(), 0, 26);
 							ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
 							_stk.shrink(Mth.nextInt(RandomSource.create(), 2, 6));

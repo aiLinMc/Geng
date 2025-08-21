@@ -28,27 +28,23 @@ import net.minecraft.commands.CommandSource;
 import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.geng.network.GengModVariables;
 import net.mcreator.geng.init.GengModItems;
 
 public class KnifeOfHuaqiangCutProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		double sweetness = 0;
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.MELON) {
-			{
-				GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);
-				_vars.Sweet = new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
-						}
-						return 0;
+			sweetness = new Object() {
+				double convert(String s) {
+					try {
+						return Double.parseDouble(s.trim());
+					} catch (Exception e) {
 					}
-				}.convert(Mth.nextInt(RandomSource.create(), 10, 90) + "." + Mth.nextInt(RandomSource.create(), 0, 99));
-				_vars.syncPlayerVariables(entity);
-			}
+					return 0;
+				}
+			}.convert(Mth.nextInt(RandomSource.create(), 10, 90) + "." + Mth.nextInt(RandomSource.create(), 0, 99));
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.break")), SoundSource.PLAYERS, 1, 1);
@@ -59,7 +55,7 @@ public class KnifeOfHuaqiangCutProcedure {
 			world.destroyBlock(BlockPos.containing(x, y, z), false);
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						("tellraw " + entity.getDisplayName().getString() + " \"" + Component.translatable("translation.key.name.011").getString() + entity.getData(GengModVariables.PLAYER_VARIABLES).Sweet + "%\""));
+						("tellraw " + entity.getDisplayName().getString() + " \"" + Component.translatable("chat.geng.melen.sweepness").getString() + sweetness + "%\""));
 			if (getEntityGameType(entity) == GameType.SURVIVAL || getEntityGameType(entity) == GameType.ADVENTURE) {
 				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).setDamageValue((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getDamageValue() + 1);
 			}
@@ -70,7 +66,7 @@ public class KnifeOfHuaqiangCutProcedure {
 					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("geng:cut_melon")), SoundSource.PLAYERS, 1, 1, false);
 				}
 			}
-			if (entity.getData(GengModVariables.PLAYER_VARIABLES).Sweet < 50) {
+			if (sweetness < 50) {
 				for (int index0 = 0; index0 < Mth.nextInt(RandomSource.create(), 3, 5); index0++) {
 					if (world instanceof ServerLevel _level) {
 						ItemEntity entityToSpawn = new ItemEntity(_level, (x + 0.5), (y + 0.5), (z + 0.5), new ItemStack(GengModItems.SLICED_MELON.get()));

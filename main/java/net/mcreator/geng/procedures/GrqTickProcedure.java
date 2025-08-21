@@ -20,26 +20,23 @@ public class GrqTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		double randint = 0;
+		double tick = 0;
 		if (Mth.nextInt(RandomSource.create(), 0, 96 - 12 * (entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(GengModMobEffects.GET_RICH_QUICK) ? _livEnt.getEffect(GengModMobEffects.GET_RICH_QUICK).getAmplifier() : 0)) == 1) {
-			{
-				GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);
-				_vars.random1 = Mth.nextInt(RandomSource.create(), 1, 13);
-				_vars.syncPlayerVariables(entity);
-			}
-			if (entity.getData(GengModVariables.PLAYER_VARIABLES).random1 == 1 || entity.getData(GengModVariables.PLAYER_VARIABLES).random1 == 2) {
+			randint = Mth.nextInt(RandomSource.create(), 1, 13);
+			if (randint == 1 || randint == 2) {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("give " + entity.getDisplayName().getString() + " diamond 1"));
-			} else if (entity.getData(GengModVariables.PLAYER_VARIABLES).random1 == 3 || entity.getData(GengModVariables.PLAYER_VARIABLES).random1 == 4 || entity.getData(GengModVariables.PLAYER_VARIABLES).random1 == 5) {
+			} else if (randint == 3 || randint == 4 || randint == 5) {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("give " + entity.getDisplayName().getString() + " iron_ingot 1"));
-			} else if (entity.getData(GengModVariables.PLAYER_VARIABLES).random1 == 6 || entity.getData(GengModVariables.PLAYER_VARIABLES).random1 == 7 || entity.getData(GengModVariables.PLAYER_VARIABLES).random1 == 8
-					|| entity.getData(GengModVariables.PLAYER_VARIABLES).random1 == 9) {
+			} else if (randint == 6 || randint == 7 || randint == 8 || randint == 9) {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("give " + entity.getDisplayName().getString() + " lapis_lazuli 1"));
-			} else if (entity.getData(GengModVariables.PLAYER_VARIABLES).random1 == 10 || entity.getData(GengModVariables.PLAYER_VARIABLES).random1 == 11 || entity.getData(GengModVariables.PLAYER_VARIABLES).random1 == 12) {
+			} else if (randint == 10 || randint == 11 || randint == 12) {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("give " + entity.getDisplayName().getString() + " gold_ingot 1"));
@@ -66,15 +63,11 @@ public class GrqTickProcedure {
 						("execute as " + entity.getDisplayName().getString() + " at " + entity.getDisplayName().getString() + " run fill ~-6 ~-5 ~-6 ~6 ~5 ~6 mycelium replace grass_block"));
 		}
 		if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(GengModMobEffects.GET_RICH_QUICK) ? _livEnt.getEffect(GengModMobEffects.GET_RICH_QUICK).getAmplifier() : 0) > 6) {
-			{
-				GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);
-				_vars.num1 = entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(GengModMobEffects.GET_RICH_QUICK) ? _livEnt.getEffect(GengModMobEffects.GET_RICH_QUICK).getDuration() : 0;
-				_vars.syncPlayerVariables(entity);
-			}
+			tick = entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(GengModMobEffects.GET_RICH_QUICK) ? _livEnt.getEffect(GengModMobEffects.GET_RICH_QUICK).getDuration() : 0;
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(GengModMobEffects.GET_RICH_QUICK);
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(GengModMobEffects.GET_RICH_QUICK, (int) entity.getData(GengModVariables.PLAYER_VARIABLES).num1, 6));
+				_entity.addEffect(new MobEffectInstance(GengModMobEffects.GET_RICH_QUICK, (int) tick, 6));
 		}
 		{
 			GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);

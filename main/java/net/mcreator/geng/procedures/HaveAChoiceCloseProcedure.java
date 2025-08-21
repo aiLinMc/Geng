@@ -17,7 +17,7 @@ public class HaveAChoiceCloseProcedure {
 		GengMod.queueServerWork(1, () -> {
 			if (entity.getData(GengModVariables.PLAYER_VARIABLES).choose == false && entity.getData(GengModVariables.PLAYER_VARIABLES).InChoiceGui == false) {
 				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal((Component.translatable("translation.key.message.001").getString())), false);
+					_player.displayClientMessage(Component.literal((Component.translatable("chat.geng.lie_detector.do_not_make_choice").getString())), false);
 				entity.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MOB_ATTACK), entity, entity), 6);
 			}
 			{

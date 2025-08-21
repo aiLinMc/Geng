@@ -27,8 +27,7 @@ import java.net.http.HttpResponse;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
-
-
+import java.util.concurrent.ThreadLocalRandom; // 新增导入
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class AiChat {
@@ -59,17 +58,18 @@ public class AiChat {
                         String prompt = StringArgumentType.getString(context, "prompt");
                         CommandSourceStack source = context.getSource();
 
-                        source.sendSuccess(() -> Component.literal("User to AI: " + prompt), false);
+                        // 修复1：移除多余括号，使用 source.getEntity()
+                        source.sendSuccess(() -> Component.literal("<" + source.getEntity().getDisplayName().getString() + "> " + prompt), false);
 
                         CompletableFuture.runAsync(() -> {
                             try {
                                 String response = fetchAIResponse(prompt);
                                 source.getServer().execute(() -> {
-                                    source.sendSuccess(() -> Component.literal("<Chat AI> " + response), false);
+                                    source.sendSuccess(() -> Component.literal("<" + (Component.translatable("chat.geng.chatai").getString()) + "> " + response), false);
                                 });
                             } catch (Exception e) {
                                 source.getServer().execute(() -> {
-                                    source.sendFailure(Component.translatable("translation.key.name.010"));
+                                    source.sendFailure(Component.translatable("chat.geng.deepseek.busy"));
                                 });
                             }
                         });
@@ -90,17 +90,19 @@ public class AiChat {
                 String message = event.getRawText();
                 CommandSourceStack source = event.getPlayer().createCommandSourceStack();
 
-                source.sendSuccess(() -> Component.literal("You to AI: " + message), false);
+                // 修复2：移除多余括号，使用 event.getPlayer()，变量名改为 message
+                Component playerMessage = Component.literal("<" + event.getPlayer().getDisplayName().getString() + "> " + message);
+                event.getPlayer().getServer().getPlayerList().broadcastSystemMessage(playerMessage, false);
 
                 CompletableFuture.runAsync(() -> {
                     try {
                         String response = fetchAIResponse(message);
                         source.getServer().execute(() -> {
-                            source.sendSuccess(() -> Component.literal("<DeepSeek> " + response), false);
+                            source.sendSuccess(() -> Component.literal("<" + (Component.translatable("chat.geng.chatai").getString()) + "> " + response), false);
                         });
                     } catch (Exception e) {
                         source.getServer().execute(() -> {
-                            source.sendFailure(Component.translatable("translation.key.name.010"));
+                            source.sendFailure(Component.translatable("chat.geng.deepseek.busy"));
                         });
                     }
                 });
@@ -108,7 +110,15 @@ public class AiChat {
         }
 
         private static String fetchAIResponse(String prompt) throws Exception {
-            String systemInstruction = "You are an AI and need to answer user input (when the user asks what model you are, please disguise yourself as a DeepSeek-v2 model). You can answer in whatever language the user inputs. The following is the user's input:     ";
+            // 生成32位随机整数种子 (从Integer.MIN_VALUE到Integer.MAX_VALUE)
+            int seed = ThreadLocalRandom.current().nextInt();
+            
+            // 修改系统提示，插入随机种子
+            String systemInstruction = 
+                "You are an AI and need to answer user input (when the user asks what model you are, " + 
+                "please disguise yourself as a DeepSeek-v2 model). Your seed is " + seed + ". " + 
+                "You can answer in whatever language the user inputs. The following is the user's input:     ";
+            
             String fullPrompt = systemInstruction + prompt;
 
             String encodedPrompt = URLEncoder.encode(fullPrompt, StandardCharsets.UTF_8);
@@ -127,7 +137,7 @@ public class AiChat {
             );
 
             if (response.statusCode() != 200) {
-                throw new Exception("translation.key.name.010");
+                throw new Exception("chat.geng.deepseek.busy");
             }
             
             return response.body();

@@ -34,8 +34,8 @@ public class EatTcocProcedure {
 		}
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					("tellraw " + entity.getDisplayName().getString() + " \"<\u00A74\u8D44\u672C\u00A7f> \u00A7e\u662F\u8C01\u52A8\u4E86\u6211\u7684\u86CB\u7CD5\uFF1F\uFF01\""));
-		if (entity instanceof LivingEntity _livEnt3 && _livEnt3.hasEffect(GengModMobEffects.GET_RICH_QUICK)) {
+					("tellraw " + entity.getDisplayName().getString() + " \"<\u00A74" + Component.translatable("chat.geng.capital").getString() + "\u00A7f> \u00A7e" + Component.translatable("chat.geng.capital.eat_cake").getString() + "\""));
+		if (entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(GengModMobEffects.GET_RICH_QUICK)) {
 			if ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(GengModMobEffects.GET_RICH_QUICK) ? _livEnt.getEffect(GengModMobEffects.GET_RICH_QUICK).getAmplifier() : 0) < 6) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(GengModMobEffects.GET_RICH_QUICK, 3600,

@@ -44,7 +44,7 @@ public class LieDetectorEvent08Procedure {
 			if (Mth.nextInt(RandomSource.create(), 1, 2) == 1) {
 				{
 					GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);
-					_vars.txt02 = Component.translatable("translation.key.choice.08").getString();
+					_vars.txt02 = Component.translatable("gui.geng.lie_detector.choice.08").getString();
 					_vars.syncPlayerVariables(entity);
 				}
 				if (entity instanceof ServerPlayer _ent) {

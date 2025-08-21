@@ -15,6 +15,7 @@ import net.mcreator.geng.block.OrientalPearlTVTowerPillarBlock;
 import net.mcreator.geng.block.OrientalPearlTVTowerCoreBlock;
 import net.mcreator.geng.block.OrientalPearlTVTowerBaseBlock;
 import net.mcreator.geng.block.MelonStallBlock;
+import net.mcreator.geng.block.DeskBlock;
 import net.mcreator.geng.GengMod;
 
 public class GengModBlocks {
@@ -26,6 +27,7 @@ public class GengModBlocks {
 	public static final DeferredBlock<Block> ORIENTAL_PEARL_TV_TOWER_PILLAR = REGISTRY.register("oriental_pearl_tv_tower_pillar", OrientalPearlTVTowerPillarBlock::new);
 	public static final DeferredBlock<Block> ORIENTAL_PEARL_TV_TOWER_CORE = REGISTRY.register("oriental_pearl_tv_tower_core", OrientalPearlTVTowerCoreBlock::new);
 	public static final DeferredBlock<Block> ORIENTAL_PEARL_TV_TOWER_TOP = REGISTRY.register("oriental_pearl_tv_tower_top", OrientalPearlTVTowerTopBlock::new);
+	public static final DeferredBlock<Block> DESK = REGISTRY.register("desk", DeskBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

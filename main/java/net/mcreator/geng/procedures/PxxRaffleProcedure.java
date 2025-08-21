@@ -23,7 +23,7 @@ public class PxxRaffleProcedure {
 			_player.closeContainer();
 		if (entity.getData(GengModVariables.PLAYER_VARIABLES).InLottery) {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal((Component.translatable("translation.key.message.cannot_draw").getString())), false);
+				_player.displayClientMessage(Component.literal((Component.translatable("chat.geng.pxx.cannot_draw").getString())), false);
 		} else {
 			{
 				GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);
@@ -31,11 +31,11 @@ public class PxxRaffleProcedure {
 				_vars.syncPlayerVariables(entity);
 			}
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal((Component.translatable("translation.key.message.lottery").getString())), false);
+				_player.displayClientMessage(Component.literal((Component.translatable("chat.geng.pxx.lottery").getString())), false);
 			GengMod.queueServerWork(40, () -> {
 				if (Mth.nextInt(RandomSource.create(), 1, 3) == 1) {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal((Component.translatable("translation.key.message.lottery_none").getString())), false);
+						_player.displayClientMessage(Component.literal((Component.translatable("chat.geng.pxx.lottery_none").getString())), false);
 				} else if (entity.getData(GengModVariables.PLAYER_VARIABLES).SilverDollarNum < 63) {
 					{
 						GengModVariables.PlayerVariables _vars = entity.getData(GengModVariables.PLAYER_VARIABLES);
@@ -43,7 +43,7 @@ public class PxxRaffleProcedure {
 						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal((Component.translatable("translation.key.message.lottery_success").getString())), false);
+						_player.displayClientMessage(Component.literal((Component.translatable("chat.geng.pxx.lottery_success").getString())), false);
 					if (entity.getData(GengModVariables.PLAYER_VARIABLES).randomPxx == 1 && entity.getData(GengModVariables.PLAYER_VARIABLES).SilverDollarNum < 39) {
 						{
 							Entity _ent = entity;
@@ -127,7 +127,7 @@ public class PxxRaffleProcedure {
 						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal((Component.translatable("translation.key.message.lottery_success").getString())), false);
+						_player.displayClientMessage(Component.literal((Component.translatable("chat.geng.pxx.lottery_success").getString())), false);
 					if (entity.getData(GengModVariables.PLAYER_VARIABLES).randomPxx == 1 && entity.getData(GengModVariables.PLAYER_VARIABLES).CopperCoinNum < 39) {
 						{
 							Entity _ent = entity;
@@ -222,7 +222,7 @@ public class PxxRaffleProcedure {
 						}
 					} else {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal((Component.translatable("translation.key.message.lottery_none").getString())), false);
+							_player.displayClientMessage(Component.literal((Component.translatable("chat.geng.pxx.lottery_none").getString())), false);
 					}
 				}
 				if (entity instanceof Player _player && !_player.level().isClientSide())

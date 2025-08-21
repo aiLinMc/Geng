@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "geng:polar_bear_saddle"
+    },
+    "title": {
+      "translate": "advancements.ride_polar_bear.title"
+    },
+    "description": {
+      "translate": "advancements.ride_polar_bear.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ride_polar_bear_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "geng:geng"
+}

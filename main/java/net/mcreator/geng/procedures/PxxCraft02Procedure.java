@@ -24,7 +24,7 @@ public class PxxCraft02Procedure {
 			}
 		} else {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal((Component.translatable("translation.key.message.not_enough_silver").getString())), false);
+				_player.displayClientMessage(Component.literal((Component.translatable("chat.geng.pxx.not_enough_silver").getString())), false);
 		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();

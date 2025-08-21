@@ -9,6 +9,6 @@ public class BargainingProgressTxt2Procedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return Component.translatable("translation.key.info.just1").getString() + "" + (100000 - entity.getData(GengModVariables.PLAYER_VARIABLES).bargaining_progress) / 1000 + Component.translatable("translation.key.info.text001").getString();
+		return (Component.translatable("gui.geng.pxx.machete.just").getString()).replace("{value}", "" + (100000 - entity.getData(GengModVariables.PLAYER_VARIABLES).bargaining_progress) / 1000);
 	}
 }
