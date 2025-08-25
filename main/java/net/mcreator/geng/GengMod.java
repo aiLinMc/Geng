@@ -28,7 +28,6 @@ import net.mcreator.geng.init.GengModMenus;
 import net.mcreator.geng.init.GengModItems;
 import net.mcreator.geng.init.GengModEntities;
 import net.mcreator.geng.init.GengModBlocks;
-import net.mcreator.geng.init.GengModAttributes;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.Map;
@@ -60,7 +59,7 @@ public class GengMod {
 		GengModMenus.REGISTRY.register(modEventBus);
 
 		GengModVillagerProfessions.PROFESSIONS.register(modEventBus);
-		GengModAttributes.REGISTRY.register(modEventBus);
+
 		// Start of user code block mod init
 		// End of user code block mod init
 	}

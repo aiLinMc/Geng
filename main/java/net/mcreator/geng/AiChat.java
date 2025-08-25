@@ -27,7 +27,7 @@ import java.net.http.HttpResponse;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ThreadLocalRandom; // 新增导入
+import java.util.concurrent.ThreadLocalRandom;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class AiChat {
@@ -58,7 +58,6 @@ public class AiChat {
                         String prompt = StringArgumentType.getString(context, "prompt");
                         CommandSourceStack source = context.getSource();
 
-                        // 修复1：移除多余括号，使用 source.getEntity()
                         source.sendSuccess(() -> Component.literal("<" + source.getEntity().getDisplayName().getString() + "> " + prompt), false);
 
                         CompletableFuture.runAsync(() -> {
@@ -90,7 +89,6 @@ public class AiChat {
                 String message = event.getRawText();
                 CommandSourceStack source = event.getPlayer().createCommandSourceStack();
 
-                // 修复2：移除多余括号，使用 event.getPlayer()，变量名改为 message
                 Component playerMessage = Component.literal("<" + event.getPlayer().getDisplayName().getString() + "> " + message);
                 event.getPlayer().getServer().getPlayerList().broadcastSystemMessage(playerMessage, false);
 
@@ -110,10 +108,8 @@ public class AiChat {
         }
 
         private static String fetchAIResponse(String prompt) throws Exception {
-            // 生成32位随机整数种子 (从Integer.MIN_VALUE到Integer.MAX_VALUE)
             int seed = ThreadLocalRandom.current().nextInt();
             
-            // 修改系统提示，插入随机种子
             String systemInstruction = 
                 "You are an AI and need to answer user input (when the user asks what model you are, " + 
                 "please disguise yourself as a DeepSeek-v2 model). Your seed is " + seed + ". " + 

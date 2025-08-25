@@ -8,12 +8,10 @@ import net.neoforged.bus.api.Event;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 
 import net.mcreator.geng.init.GengModItems;
-import net.mcreator.geng.init.GengModAttributes;
 
 import javax.annotation.Nullable;
 
@@ -33,7 +31,7 @@ public class SaddlePolarBearDeathProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof LivingEntity _livingEntity0 && _livingEntity0.getAttributes().hasAttribute(GengModAttributes.HAVE_SADDLE) ? _livingEntity0.getAttribute(GengModAttributes.HAVE_SADDLE).getValue() : 0) == 1) {
+		if (entity.getPersistentData().getBoolean("HaveSaddle")) {
 			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(GengModItems.POLAR_BEAR_SADDLE.get()));
 				entityToSpawn.setPickUpDelay(10);

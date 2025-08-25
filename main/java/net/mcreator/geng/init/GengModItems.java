@@ -25,6 +25,8 @@ import net.mcreator.geng.item.HundredTonKingItem;
 import net.mcreator.geng.item.HeadgearItem;
 import net.mcreator.geng.item.GoldCoinItem;
 import net.mcreator.geng.item.DeepseekItem;
+import net.mcreator.geng.item.CrasherPlusItem;
+import net.mcreator.geng.item.CrasherItem;
 import net.mcreator.geng.item.CopperCoinItem;
 import net.mcreator.geng.item.ConcertTicketPurchaseItem;
 import net.mcreator.geng.item.A1Item;
@@ -56,6 +58,8 @@ public class GengModItems {
 	public static final DeferredItem<Item> CONCERT_TICKET_PURCHASE = REGISTRY.register("concert_ticket_purchase", ConcertTicketPurchaseItem::new);
 	public static final DeferredItem<Item> DESK = block(GengModBlocks.DESK);
 	public static final DeferredItem<Item> POLAR_BEAR_SADDLE = REGISTRY.register("polar_bear_saddle", PolarBearSaddleItem::new);
+	public static final DeferredItem<Item> CRASHER = REGISTRY.register("crasher", CrasherItem::new);
+	public static final DeferredItem<Item> CRASHER_PLUS = REGISTRY.register("crasher_plus", CrasherPlusItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

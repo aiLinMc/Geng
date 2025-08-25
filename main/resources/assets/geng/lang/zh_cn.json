@@ -168,7 +168,6 @@
   "chat.geng.broken_legs": "%1被%2（管家）活活打断了双腿",
   "effect.geng.leg_disability": "残疾",
   "item.geng.polar_bear_saddle": "北极熊的鞍",
-  "attribute.geng.have_saddle": "带鞍",
   "gui.geng.polar_bear_location.label_z": "z: ",
   "gui.geng.polar_bear_location.label_polar_bear_location": "北极熊定位",
   "gui.geng.polar_bear_location.label_y": "y: ",
@@ -178,5 +177,10 @@
   "gui.geng.polar_bear_location.location_y": "70",
   "gui.geng.polar_bear_location.location_x": "0",
   "advancements.ride_polar_bear.descr": "骑一只北极熊",
-  "advancements.ride_polar_bear.title": "你抚琵琶奏琴弦"
+  "advancements.ride_polar_bear.title": "你抚琵琶奏琴弦",
+  "item.geng.crasher": "§2§ka1h5t§r§5 游戏崩溃器 §2§kgo6nd",
+  "item.geng.crasher_plus": "§2§ka1h5t§r§5 游戏崩溃器Plus §2§kgo6nd",
+  "item.geng.crasher_plus.description_2": "§e制作者无需承担任何该功能造成的损失，后果自负！",
+  "item.geng.crasher_plus.description_0": "§e警告！！！",
+  "item.geng.crasher_plus.description_1": "§e请谨慎使用！该功能对低配电脑很不友好！"
 }

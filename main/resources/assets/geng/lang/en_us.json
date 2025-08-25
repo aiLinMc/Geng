@@ -168,7 +168,6 @@
   "chat.geng.broken_legs": "%1\u0027s legs were broken alive by %2.",
   "effect.geng.leg_disability": "Leg Disability",
   "item.geng.polar_bear_saddle": "Polar Bear Saddle",
-  "attribute.geng.have_saddle": "Have Saddle",
   "gui.geng.polar_bear_location.label_z": "z: ",
   "gui.geng.polar_bear_location.label_polar_bear_location": "Polar Bear Location",
   "gui.geng.polar_bear_location.label_y": "y: ",
@@ -178,5 +177,10 @@
   "gui.geng.polar_bear_location.location_y": "70",
   "gui.geng.polar_bear_location.location_x": "0",
   "advancements.ride_polar_bear.descr": "Ride a Polar Bear",
-  "advancements.ride_polar_bear.title": "You Caress The Pipa And Play The Strings"
+  "advancements.ride_polar_bear.title": "You Caress The Pipa And Play The Strings",
+  "item.geng.crasher": "§2§ka1h5t§r§5 Crasher §2§kgo6nd",
+  "item.geng.crasher_plus": "§2§ka1h5t§r§5 Crasher Plus §2§kgo6nd",
+  "item.geng.crasher_plus.description_2": "§eThe creator is not responsible for any losses caused by this feature",
+  "item.geng.crasher_plus.description_0": "§eWarning!!!",
+  "item.geng.crasher_plus.description_1": "§eIf your computer configuration is too low, please use it with caution"
 }
