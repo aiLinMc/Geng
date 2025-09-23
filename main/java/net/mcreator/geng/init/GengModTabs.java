@@ -37,6 +37,7 @@ public class GengModTabs {
 			tabData.accept(GengModItems.POLAR_BEAR_SADDLE.get());
 			tabData.accept(GengModItems.CRASHER.get());
 			tabData.accept(GengModItems.CRASHER_PLUS.get());
+			tabData.accept(GengModItems.BIG_STOMACH_CHESTPLATE.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(GengModItems.KNIFE_OF_HUAQIANG.get());
 			tabData.accept(GengModItems.SUN.get());

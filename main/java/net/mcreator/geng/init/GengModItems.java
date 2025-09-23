@@ -29,6 +29,7 @@ import net.mcreator.geng.item.CrasherPlusItem;
 import net.mcreator.geng.item.CrasherItem;
 import net.mcreator.geng.item.CopperCoinItem;
 import net.mcreator.geng.item.ConcertTicketPurchaseItem;
+import net.mcreator.geng.item.BigStomachItem;
 import net.mcreator.geng.item.A1Item;
 import net.mcreator.geng.GengMod;
 
@@ -60,6 +61,7 @@ public class GengModItems {
 	public static final DeferredItem<Item> POLAR_BEAR_SADDLE = REGISTRY.register("polar_bear_saddle", PolarBearSaddleItem::new);
 	public static final DeferredItem<Item> CRASHER = REGISTRY.register("crasher", CrasherItem::new);
 	public static final DeferredItem<Item> CRASHER_PLUS = REGISTRY.register("crasher_plus", CrasherPlusItem::new);
+	public static final DeferredItem<Item> BIG_STOMACH_CHESTPLATE = REGISTRY.register("big_stomach_chestplate", BigStomachItem.Chestplate::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

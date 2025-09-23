@@ -182,5 +182,9 @@
   "item.geng.crasher_plus": "§2§ka1h5t§r§5 Crasher Plus §2§kgo6nd",
   "item.geng.crasher_plus.description_2": "§eThe creator is not responsible for any losses caused by this feature",
   "item.geng.crasher_plus.description_0": "§eWarning!!!",
-  "item.geng.crasher_plus.description_1": "§eIf your computer configuration is too low, please use it with caution"
+  "item.geng.crasher_plus.description_1": "§eIf your computer configuration is too low, please use it with caution",
+  "item.geng.big_stomach_chestplate": "Big Stomach",
+  "advancements.taste_clan.descr": "Equipping the Big Stomach",
+  "advancements.taste_clan.title": "Taste Clan",
+  "subtitles.duang": "Duang"
 }

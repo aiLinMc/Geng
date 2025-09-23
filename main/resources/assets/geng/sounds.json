@@ -91,5 +91,14 @@
         "stream": false
       }
     ]
+  },
+  "duang": {
+    "subtitle": "subtitles.duang",
+    "sounds": [
+      {
+        "name": "geng:duang",
+        "stream": false
+      }
+    ]
   }
 }

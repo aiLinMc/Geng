@@ -24,4 +24,5 @@ public class GengModSounds {
 	public static final DeferredHolder<SoundEvent, SoundEvent> WHAT_KIND_OF_PRESENCE_TO_BRUSH = REGISTRY.register("what_kind_of_presence_to_brush",
 			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("geng", "what_kind_of_presence_to_brush")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> WHY_SHOULD_TALK_TO_YOU = REGISTRY.register("why_should_talk_to_you", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("geng", "why_should_talk_to_you")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> DUANG = REGISTRY.register("duang", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("geng", "duang")));
 }

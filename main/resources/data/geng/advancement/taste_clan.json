@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "geng:big_stomach_chestplate"
+    },
+    "title": {
+      "translate": "advancements.taste_clan.title"
+    },
+    "description": {
+      "translate": "advancements.taste_clan.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "taste_clan_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "geng:geng"
+}
