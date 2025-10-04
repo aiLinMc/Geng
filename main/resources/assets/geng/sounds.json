@@ -100,5 +100,13 @@
         "stream": false
       }
     ]
+  },
+  "faded": {
+    "sounds": [
+      {
+        "name": "geng:faded",
+        "stream": true
+      }
+    ]
   }
 }
