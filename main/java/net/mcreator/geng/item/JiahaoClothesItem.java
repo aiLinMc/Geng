@@ -32,7 +32,7 @@ public abstract class JiahaoClothesItem extends ArmorItem {
 				map.put(ArmorItem.Type.HELMET, 1);
 				map.put(ArmorItem.Type.BODY, 1);
 			}), 16, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("geng:jiahao"))), 0f, 0.5f);
-			registerHelper.register(ResourceLocation.parse("geng:jiahao_clothes"), armorMaterial);
+			registerHelper.register(ResourceLocation.parse("geng:jiahao"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});
 	}

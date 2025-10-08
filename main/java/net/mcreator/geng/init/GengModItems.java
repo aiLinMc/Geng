@@ -63,10 +63,10 @@ public class GengModItems {
 	public static final DeferredItem<Item> CRASHER = REGISTRY.register("crasher", CrasherItem::new);
 	public static final DeferredItem<Item> CRASHER_PLUS = REGISTRY.register("crasher_plus", CrasherPlusItem::new);
 	public static final DeferredItem<Item> BIG_STOMACH_CHESTPLATE = REGISTRY.register("big_stomach_chestplate", BigStomachItem.Chestplate::new);
-	public static final DeferredItem<Item> JIAHAO_CLOTHES_HELMET = REGISTRY.register("jiahao_clothes_helmet", JiahaoClothesItem.Helmet::new);
-	public static final DeferredItem<Item> JIAHAO_CLOTHES_CHESTPLATE = REGISTRY.register("jiahao_clothes_chestplate", JiahaoClothesItem.Chestplate::new);
-	public static final DeferredItem<Item> JIAHAO_CLOTHES_LEGGINGS = REGISTRY.register("jiahao_clothes_leggings", JiahaoClothesItem.Leggings::new);
-	public static final DeferredItem<Item> JIAHAO_CLOTHES_BOOTS = REGISTRY.register("jiahao_clothes_boots", JiahaoClothesItem.Boots::new);
+	public static final DeferredItem<Item> JIAHAO_HELMET = REGISTRY.register("jiahao_helmet", JiahaoClothesItem.Helmet::new);
+	public static final DeferredItem<Item> JIAHAO_CHESTPLATE = REGISTRY.register("jiahao_chestplate", JiahaoClothesItem.Chestplate::new);
+	public static final DeferredItem<Item> JIAHAO_LEGGINGS = REGISTRY.register("jiahao_leggings", JiahaoClothesItem.Leggings::new);
+	public static final DeferredItem<Item> JIAHAO_BOOTS = REGISTRY.register("jiahao_boots", JiahaoClothesItem.Boots::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

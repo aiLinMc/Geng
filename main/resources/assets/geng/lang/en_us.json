@@ -131,10 +131,10 @@
   "item.geng.putin.description.click": "Right click on the mouse to switch modes",
   "block.geng.oriental_pearl_tv_tower_base": "Oriental Pearl TV Tower Base",
   "block.geng.oriental_pearl_tv_tower_base_lower_sphere": "Oriental Pearl TV Tower Lower Sphere",
-  "block.geng.oriental_pearl_tv_tower_pillar": "Oriental Pearl TV Tower Pillar",
+  "block.geng.oriental_pearl_tv_tower_pillar": "orientOriental Pearl TV Tower Pillar",
   "block.geng.oriental_pearl_tv_tower_core": "Oriental Pearl TV Tower Core",
   "block.geng.oriental_pearl_tv_tower_top": "Oriental Pearl TV Tower Top",
-  "block.geng.oriental_pearl_tv_tower_core.description_0": "Mysterious power ..",
+  "block.geng.oriental_pearl_tv_tower_core.description_0": "神秘的力量...",
   "effect.geng.the_grace_of_the_snow_king": "The Grace Of The Snow King",
   "death.attack.kicked_out_of_shanghai.item": "%1$s kicked out of Shanghai",
   "death.attack.kicked_out_of_shanghai.player": "%1$s kicked out of Shanghai whilst trying to escape %2$s",
@@ -187,9 +187,9 @@
   "advancements.taste_clan.descr": "Equipping the Big Stomach",
   "advancements.taste_clan.title": "Taste Clan",
   "subtitles.duang": "Duang",
-  "item.geng.jiahao_clothes_helmet": "Jiahao Hat",
-  "item.geng.jiahao_clothes_chestplate": "Jiahao Jacket",
-  "item.geng.jiahao_clothes_boots": "Jiahao Shoes",
-  "item.geng.jiahao_clothes_leggings": "Jiahao Pants",
-  "subtitles.faded": ""
+  "subtitles.faded": "",
+  "item.geng.jiahao_boots": "Jiahao Shoes",
+  "item.geng.jiahao_helmet": "Jiahao Hat",
+  "item.geng.jiahao_leggings": "Jiahao Pants",
+  "item.geng.jiahao_chestplate": "Jiahao Jacket"
 }

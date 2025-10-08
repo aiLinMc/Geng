@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "geng:block/pinxixi_lottery_box",
-    "up": "geng:block/pinxixi_lottery_box",
+    "down": "geng:block/pxx_top",
+    "up": "geng:block/pxx_top",
     "north": "geng:block/pinxixi_lottery_box",
     "east": "geng:block/pinxixi_lottery_box",
     "south": "geng:block/pinxixi_lottery_box",
     "west": "geng:block/pinxixi_lottery_box",
-    "particle": "geng:block/pinxixi_lottery_box"
+    "particle": "geng:block/pxx_top"
   },
   "render_type": "solid"
 }

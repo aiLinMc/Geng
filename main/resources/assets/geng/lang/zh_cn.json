@@ -187,9 +187,9 @@
   "advancements.taste_clan.descr": "装备大胃袋",
   "advancements.taste_clan.title": "味真族~",
   "subtitles.duang": "Duang",
-  "item.geng.jiahao_clothes_helmet": "嘉豪之帽",
-  "item.geng.jiahao_clothes_chestplate": "嘉豪之衣",
-  "item.geng.jiahao_clothes_boots": "嘉豪之鞋",
-  "item.geng.jiahao_clothes_leggings": "嘉豪之裤",
-  "subtitles.faded": ""
+  "subtitles.faded": "",
+  "item.geng.jiahao_boots": "Jiahao Shoes",
+  "item.geng.jiahao_helmet": "Jiahao Hat",
+  "item.geng.jiahao_leggings": "Jiahao Pants",
+  "item.geng.jiahao_chestplate": "Jiahao Jacket"
 }

@@ -44,10 +44,10 @@ public class GengModTabs {
 			tabData.accept(GengModItems.PINXIXI_MACHETE.get());
 			tabData.accept(GengModItems.ZI_ER.get());
 			tabData.accept(GengModItems.HEADGEAR_HELMET.get());
-			tabData.accept(GengModItems.JIAHAO_CLOTHES_HELMET.get());
-			tabData.accept(GengModItems.JIAHAO_CLOTHES_CHESTPLATE.get());
-			tabData.accept(GengModItems.JIAHAO_CLOTHES_LEGGINGS.get());
-			tabData.accept(GengModItems.JIAHAO_CLOTHES_BOOTS.get());
+			tabData.accept(GengModItems.JIAHAO_HELMET.get());
+			tabData.accept(GengModItems.JIAHAO_CHESTPLATE.get());
+			tabData.accept(GengModItems.JIAHAO_LEGGINGS.get());
+			tabData.accept(GengModItems.JIAHAO_BOOTS.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
 			tabData.accept(GengModBlocks.MELON_STALL.get().asItem());
 			tabData.accept(GengModBlocks.PINXIXI_LOTTERY_BOX.get().asItem());
