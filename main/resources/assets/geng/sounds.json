@@ -108,5 +108,23 @@
         "stream": true
       }
     ]
+  },
+  "oneshot": {
+    "subtitle": "subtitles.oneshot",
+    "sounds": [
+      {
+        "name": "geng:kemiao",
+        "stream": false
+      }
+    ]
+  },
+  "bangbang": {
+    "subtitle": "subtitles.bangbang",
+    "sounds": [
+      {
+        "name": "geng:bangbangbangbang",
+        "stream": false
+      }
+    ]
   }
 }

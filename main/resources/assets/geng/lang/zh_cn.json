@@ -188,8 +188,11 @@
   "advancements.taste_clan.title": "味真族~",
   "subtitles.duang": "Duang",
   "subtitles.faded": "",
-  "item.geng.jiahao_boots": "Jiahao Shoes",
-  "item.geng.jiahao_helmet": "Jiahao Hat",
-  "item.geng.jiahao_leggings": "Jiahao Pants",
-  "item.geng.jiahao_chestplate": "Jiahao Jacket"
+  "item.geng.jiahao_boots": "嘉豪战靴",
+  "item.geng.jiahao_helmet": "嘉豪战帽",
+  "item.geng.jiahao_leggings": "嘉豪战裤",
+  "item.geng.jiahao_chestplate": "嘉豪战衣",
+  "enchantment.geng.oneshot_kill": "§a颗秒",
+  "subtitles.oneshot": "颗秒！",
+  "subtitles.bangbang": "邦邦邦邦~！"
 }

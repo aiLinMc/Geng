@@ -134,7 +134,7 @@
   "block.geng.oriental_pearl_tv_tower_pillar": "orientOriental Pearl TV Tower Pillar",
   "block.geng.oriental_pearl_tv_tower_core": "Oriental Pearl TV Tower Core",
   "block.geng.oriental_pearl_tv_tower_top": "Oriental Pearl TV Tower Top",
-  "block.geng.oriental_pearl_tv_tower_core.description_0": "神秘的力量...",
+  "block.geng.oriental_pearl_tv_tower_core.description_0": "Mysterious Power ...",
   "effect.geng.the_grace_of_the_snow_king": "The Grace Of The Snow King",
   "death.attack.kicked_out_of_shanghai.item": "%1$s kicked out of Shanghai",
   "death.attack.kicked_out_of_shanghai.player": "%1$s kicked out of Shanghai whilst trying to escape %2$s",
@@ -191,5 +191,8 @@
   "item.geng.jiahao_boots": "Jiahao Shoes",
   "item.geng.jiahao_helmet": "Jiahao Hat",
   "item.geng.jiahao_leggings": "Jiahao Pants",
-  "item.geng.jiahao_chestplate": "Jiahao Jacket"
+  "item.geng.jiahao_chestplate": "Jiahao Jacket",
+  "enchantment.geng.oneshot_kill": "One-shot Kill",
+  "subtitles.oneshot": "One-shot Kill!",
+  "subtitles.bangbang": "Bang Bang Bang Bang!"
 }
