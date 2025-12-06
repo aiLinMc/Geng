@@ -193,5 +193,17 @@
   "item.geng.jiahao_leggings": "Jiahao Pants",
   "item.geng.jiahao_chestplate": "Jiahao Jacket",
   "enchantment.geng.oneshot_kill": "One-shot Kill",
-  "subtitles.oneshot": "One-shot Kill!"
+  "subtitles.oneshot": "One-shot Kill!",
+  "item.geng.oil_bottle": "Oil Bottle",
+  "subtitles.elegant_people_dance": "Elegant People Dance",
+  "item.geng.elegant_people": "Elegant People",
+  "effect.geng.tasting": "Tasting。",
+  "item.minecraft.tipped_arrow.effect.tasting_in_progress": "Arrow of Tasting In Progress",
+  "item.minecraft.potion.effect.tasting_in_progress": "Potion of Tasting In Progress",
+  "item.minecraft.lingering_potion.effect.tasting_in_progress": "Lingering Potion of Tasting In Progress",
+  "item.minecraft.splash_potion.effect.tasting_in_progress": "Splash Potion of Tasting In Progress",
+  "chat.geng.elegant_people.not": "You\u0027re not the Elegant people, so you can\u0027t do that.",
+  "chat.geng.elegant_people.empty": "There\u0027s no oil on the moon!",
+  "chat.geng.oil_bottle.inside": "Please use it for furnaces containing items to be melted.",
+  "key.geng.elegant_people_dance": "Elegant People Dance"
 }

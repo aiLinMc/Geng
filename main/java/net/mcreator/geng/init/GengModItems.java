@@ -20,11 +20,13 @@ import net.mcreator.geng.item.SilverDollarItem;
 import net.mcreator.geng.item.PutinItem;
 import net.mcreator.geng.item.PolarBearSaddleItem;
 import net.mcreator.geng.item.PinxixiMacheteItem;
+import net.mcreator.geng.item.OilBottleItem;
 import net.mcreator.geng.item.KnifeOfHuaqiangItem;
 import net.mcreator.geng.item.JiahaoClothesItem;
 import net.mcreator.geng.item.HundredTonKingItem;
 import net.mcreator.geng.item.HeadgearItem;
 import net.mcreator.geng.item.GoldCoinItem;
+import net.mcreator.geng.item.ElegantPeopleItem;
 import net.mcreator.geng.item.DeepseekItem;
 import net.mcreator.geng.item.CrasherPlusItem;
 import net.mcreator.geng.item.CrasherItem;
@@ -67,6 +69,8 @@ public class GengModItems {
 	public static final DeferredItem<Item> JIAHAO_CHESTPLATE = REGISTRY.register("jiahao_chestplate", JiahaoClothesItem.Chestplate::new);
 	public static final DeferredItem<Item> JIAHAO_LEGGINGS = REGISTRY.register("jiahao_leggings", JiahaoClothesItem.Leggings::new);
 	public static final DeferredItem<Item> JIAHAO_BOOTS = REGISTRY.register("jiahao_boots", JiahaoClothesItem.Boots::new);
+	public static final DeferredItem<Item> OIL_BOTTLE = REGISTRY.register("oil_bottle", OilBottleItem::new);
+	public static final DeferredItem<Item> ELEGANT_PEOPLE = REGISTRY.register("elegant_people", ElegantPeopleItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

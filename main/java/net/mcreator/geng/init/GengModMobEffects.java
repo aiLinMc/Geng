@@ -20,6 +20,7 @@ import net.mcreator.geng.procedures.GetRichQuickOverProcedure;
 import net.mcreator.geng.potion.WeightGainMobEffect;
 import net.mcreator.geng.potion.VillagerAngerMobEffect;
 import net.mcreator.geng.potion.TheGraceOfTheSnowKingMobEffect;
+import net.mcreator.geng.potion.TastingMobEffect;
 import net.mcreator.geng.potion.RussianProportionMobEffect;
 import net.mcreator.geng.potion.ResourceDepletionMobEffect;
 import net.mcreator.geng.potion.RawMelonEggsMobEffect;
@@ -42,6 +43,7 @@ public class GengModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> THE_GRACE_OF_THE_SNOW_KING = REGISTRY.register("the_grace_of_the_snow_king", () -> new TheGraceOfTheSnowKingMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> DAODAOS_MOTHER = REGISTRY.register("daodaos_mother", () -> new DaodaosMotherMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> LEG_DISABILITY = REGISTRY.register("leg_disability", () -> new LegDisabilityMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> TASTING = REGISTRY.register("tasting", () -> new TastingMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {

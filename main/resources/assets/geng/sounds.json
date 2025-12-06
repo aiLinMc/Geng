@@ -117,5 +117,14 @@
         "stream": true
       }
     ]
+  },
+  "elegant_people_dance": {
+    "subtitle": "subtitles.elegant_people_dance",
+    "sounds": [
+      {
+        "name": "geng:elegant_people_dance",
+        "stream": false
+      }
+    ]
   }
 }

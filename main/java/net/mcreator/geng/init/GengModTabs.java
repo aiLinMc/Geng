@@ -27,6 +27,7 @@ public class GengModTabs {
 			tabData.accept(GengModItems.SILVER_DOLLAR.get());
 			tabData.accept(GengModItems.COPPER_COIN.get());
 			tabData.accept(GengModItems.ZI_ER.get());
+			tabData.accept(GengModItems.OIL_BOTTLE.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
 			tabData.accept(GengModItems.THE_CAKE_OF_CAPITAL.get());
 			tabData.accept(GengModItems.SLICED_MELON.get());

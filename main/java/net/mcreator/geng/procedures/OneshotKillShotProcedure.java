@@ -63,6 +63,7 @@ public class OneshotKillShotProcedure {
 								});
 							}
 						}
+						//yyxc99
 						entityiterator.push((0.8 * Math.sin(Math.toRadians(entityiterator.getYRot())) * ((90 - Math.abs(entity.getXRot())) / 90d)), ((-0.006) * entity.getXRot()),
 								(0.8 * (0 - Math.cos(Math.toRadians(entityiterator.getYRot())) * ((90 - Math.abs(entity.getXRot())) / 90d))));
 						if (world instanceof Level _level) {

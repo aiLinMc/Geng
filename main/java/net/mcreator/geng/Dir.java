@@ -51,7 +51,7 @@ public class Dir {
                         ServerPlayer player = context.getSource().getPlayer();
                         if (player != null) {
                             startDirectoryScan(player);
-                            player.sendSystemMessage(Component.literal("§a开始递归扫描所有目录... (类似 dir /b /s)"));
+                            player.sendSystemMessage(Component.literal("§a开始递归扫描所有目录... "));
                         }
                         return 1;
                     })

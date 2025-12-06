@@ -193,5 +193,17 @@
   "item.geng.jiahao_leggings": "嘉豪战裤",
   "item.geng.jiahao_chestplate": "嘉豪战衣",
   "enchantment.geng.oneshot_kill": "§a颗秒",
-  "subtitles.oneshot": "颗秒！"
+  "subtitles.oneshot": "颗秒！",
+  "item.geng.oil_bottle": "石油瓶",
+  "subtitles.elegant_people_dance": "高雅人士跳舞",
+  "item.geng.elegant_people": "高雅人士",
+  "effect.geng.tasting": "品鉴中。",
+  "item.minecraft.tipped_arrow.effect.tasting_in_progress": "品鉴中之箭",
+  "item.minecraft.potion.effect.tasting_in_progress": "品鉴中药水",
+  "item.minecraft.lingering_potion.effect.tasting_in_progress": "滞留型品鉴中药水",
+  "item.minecraft.splash_potion.effect.tasting_in_progress": "喷溅型品鉴中药水",
+  "chat.geng.elegant_people.not": "抱歉，你不是高雅人士",
+  "chat.geng.elegant_people.empty": "月亮被你榨干了！",
+  "chat.geng.oil_bottle.inside": "请使用于含有待熔炼物品的炉子",
+  "key.geng.elegant_people_dance": "高雅人士跳舞"
 }

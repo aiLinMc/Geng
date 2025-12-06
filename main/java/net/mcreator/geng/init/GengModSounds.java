@@ -27,4 +27,5 @@ public class GengModSounds {
 	public static final DeferredHolder<SoundEvent, SoundEvent> DUANG = REGISTRY.register("duang", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("geng", "duang")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> ONESHOT = REGISTRY.register("oneshot", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("geng", "oneshot")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> FADED = REGISTRY.register("faded", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("geng", "faded")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ELEGANT_PEOPLE_DANCE = REGISTRY.register("elegant_people_dance", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("geng", "elegant_people_dance")));
 }
