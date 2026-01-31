@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/frosted_ice_1",
+    "up": "minecraft:block/frosted_ice_1",
+    "north": "minecraft:block/frosted_ice_1",
+    "east": "minecraft:block/frosted_ice_1",
+    "south": "minecraft:block/frosted_ice_1",
+    "west": "minecraft:block/frosted_ice_1",
+    "particle": "minecraft:block/ice"
+  },
+  "render_type": "translucent"
+}

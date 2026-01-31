@@ -81,6 +81,7 @@ public class GengModVariables {
 			clone.polar_bear_z = original.polar_bear_z;
 			clone.max_y_speed = original.max_y_speed;
 			clone.JiahaoMusicTick = original.JiahaoMusicTick;
+			clone.inf_by_hackers = original.inf_by_hackers;
 			if (!event.isWasDeath()) {
 				clone.ddm_sound_tick = original.ddm_sound_tick;
 			}
@@ -111,6 +112,7 @@ public class GengModVariables {
 		public double polar_bear_z = 0;
 		public double max_y_speed = 0.0;
 		public double JiahaoMusicTick = 0;
+		public boolean inf_by_hackers = false;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -137,6 +139,7 @@ public class GengModVariables {
 			nbt.putDouble("polar_bear_z", polar_bear_z);
 			nbt.putDouble("max_y_speed", max_y_speed);
 			nbt.putDouble("JiahaoMusicTick", JiahaoMusicTick);
+			nbt.putBoolean("inf_by_hackers", inf_by_hackers);
 			return nbt;
 		}
 
@@ -164,6 +167,7 @@ public class GengModVariables {
 			polar_bear_z = nbt.getDouble("polar_bear_z");
 			max_y_speed = nbt.getDouble("max_y_speed");
 			JiahaoMusicTick = nbt.getDouble("JiahaoMusicTick");
+			inf_by_hackers = nbt.getBoolean("inf_by_hackers");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

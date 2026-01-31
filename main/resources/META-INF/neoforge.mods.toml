@@ -4,7 +4,7 @@ license="Academic Free License v3.0"
 
 [[mods]]
 modId="geng"
-version="1.13"
+version="1.15"
 displayName="Geng"
 displayURL="https://space.bilibili.com/3493284076849745"
 logoFile="logo.png"
@@ -43,6 +43,12 @@ description="\u4E2D\u56FD\u7684\u7F51\u7EDC\u70ED\u6897\uFF01"
     ordering="NONE"
     side="BOTH"
 
+[[dependencies.geng]]
+    modId="jade"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 
 # Start of user code block custom mixins

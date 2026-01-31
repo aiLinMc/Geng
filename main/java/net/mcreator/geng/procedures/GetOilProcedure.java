@@ -24,6 +24,8 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.Minecraft;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.AdvancementHolder;
 
 import net.mcreator.geng.init.GengModMobEffects;
 import net.mcreator.geng.init.GengModItems;
@@ -54,6 +56,16 @@ public class GetOilProcedure {
 							ItemStack _setstack = new ItemStack(GengModItems.OIL_BOTTLE.get()).copy();
 							_setstack.setCount(1);
 							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+						}
+					}
+					if (entity instanceof ServerPlayer _player) {
+						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("geng:get_oil_from_moon"));
+						if (_adv != null) {
+							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+							if (!_ap.isDone()) {
+								for (String criteria : _ap.getRemainingCriteria())
+									_player.getAdvancements().award(_adv, criteria);
+							}
 						}
 					}
 					if (world instanceof Level _level) {

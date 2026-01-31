@@ -17,6 +17,7 @@ import net.minecraft.core.registries.Registries;
 import net.mcreator.geng.procedures.RussianProportionOverProcedure;
 import net.mcreator.geng.procedures.ResourceDepletionOverProcedure;
 import net.mcreator.geng.procedures.GetRichQuickOverProcedure;
+import net.mcreator.geng.potion.WishingYouProsperityMobEffect;
 import net.mcreator.geng.potion.WeightGainMobEffect;
 import net.mcreator.geng.potion.VillagerAngerMobEffect;
 import net.mcreator.geng.potion.TheGraceOfTheSnowKingMobEffect;
@@ -44,6 +45,7 @@ public class GengModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> DAODAOS_MOTHER = REGISTRY.register("daodaos_mother", () -> new DaodaosMotherMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> LEG_DISABILITY = REGISTRY.register("leg_disability", () -> new LegDisabilityMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> TASTING = REGISTRY.register("tasting", () -> new TastingMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> WISHING_YOU_PROSPERITY = REGISTRY.register("wishing_you_prosperity", () -> new WishingYouProsperityMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {

@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "geng:oil_bottle"
+    },
+    "title": {
+      "translate": "advancements.get_oil_from_moon.title"
+    },
+    "description": {
+      "translate": "advancements.get_oil_from_moon.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_oil_from_moon_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "geng:geng"
+}

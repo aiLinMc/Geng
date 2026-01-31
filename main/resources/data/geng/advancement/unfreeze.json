@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "geng:frozen_mr_hua"
+    },
+    "title": {
+      "translate": "advancements.unfreeze.title"
+    },
+    "description": {
+      "translate": "advancements.unfreeze.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "unfreeze_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "geng:geng"
+}

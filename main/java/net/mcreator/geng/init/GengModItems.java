@@ -21,6 +21,7 @@ import net.mcreator.geng.item.PutinItem;
 import net.mcreator.geng.item.PolarBearSaddleItem;
 import net.mcreator.geng.item.PinxixiMacheteItem;
 import net.mcreator.geng.item.OilBottleItem;
+import net.mcreator.geng.item.LowProfileHackersItem;
 import net.mcreator.geng.item.KnifeOfHuaqiangItem;
 import net.mcreator.geng.item.JiahaoClothesItem;
 import net.mcreator.geng.item.HundredTonKingItem;
@@ -28,6 +29,7 @@ import net.mcreator.geng.item.HeadgearItem;
 import net.mcreator.geng.item.GoldCoinItem;
 import net.mcreator.geng.item.ElegantPeopleItem;
 import net.mcreator.geng.item.DeepseekItem;
+import net.mcreator.geng.item.DeHuaItem;
 import net.mcreator.geng.item.CrasherPlusItem;
 import net.mcreator.geng.item.CrasherItem;
 import net.mcreator.geng.item.CopperCoinItem;
@@ -71,6 +73,9 @@ public class GengModItems {
 	public static final DeferredItem<Item> JIAHAO_BOOTS = REGISTRY.register("jiahao_boots", JiahaoClothesItem.Boots::new);
 	public static final DeferredItem<Item> OIL_BOTTLE = REGISTRY.register("oil_bottle", OilBottleItem::new);
 	public static final DeferredItem<Item> ELEGANT_PEOPLE = REGISTRY.register("elegant_people", ElegantPeopleItem::new);
+	public static final DeferredItem<Item> LOW_PROFILE_HACKERS = REGISTRY.register("low_profile_hackers", LowProfileHackersItem::new);
+	public static final DeferredItem<Item> FROZEN_MR_HUA = block(GengModBlocks.FROZEN_MR_HUA);
+	public static final DeferredItem<Item> DE_HUA = REGISTRY.register("de_hua", DeHuaItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

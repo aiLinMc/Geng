@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "blockstate=0": {
+      "model": "geng:block/frozen_mr_hua"
+    },
+    "blockstate=1": {
+      "model": "geng:block/frozen_mr_hua_state_blockstate_0"
+    },
+    "blockstate=2": {
+      "model": "geng:block/frozen_mr_hua_state_blockstate_1"
+    },
+    "blockstate=3": {
+      "model": "geng:block/frozen_mr_hua_state_blockstate_2"
+    }
+  }
+}
