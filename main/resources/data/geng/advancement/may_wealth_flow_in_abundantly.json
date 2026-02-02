@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:gold_ingot"
+    },
+    "title": {
+      "translate": "advancements.may_wealth_flow_in_abundantly.title"
+    },
+    "description": {
+      "translate": "advancements.may_wealth_flow_in_abundantly.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "may_wealth_flow_in_abundantly_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "geng:unfreeze"
+}

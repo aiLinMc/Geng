@@ -236,5 +236,9 @@
   "advancements.unfreeze.title": "解冻",
   "advancements.refreeze.title": "重冻",
   "advancements.refreeze.descr": "让刘德华再次被冻上",
-  "effect.geng.wishing_you_prosperity": "恭喜你发财"
+  "effect.geng.wishing_you_prosperity": "恭喜你发财",
+  "advancements.may_wealth_flow_in_abundantly.descr": "让村民给你“红包”",
+  "advancements.may_wealth_flow_in_abundantly.title": "财源广进",
+  "advancements.prosperous_and_thriving.title": "红红火火",
+  "advancements.prosperous_and_thriving.descr": "让雪傀儡放烟花，然后伤到你"
 }

@@ -236,5 +236,9 @@
   "advancements.unfreeze.title": "Unfreeze",
   "advancements.refreeze.title": "Refreeze",
   "advancements.refreeze.descr": "Let Dehua be frozen again",
-  "effect.geng.wishing_you_prosperity": "Wishing You Prosperity"
+  "effect.geng.wishing_you_prosperity": "Wishing You Prosperity",
+  "advancements.may_wealth_flow_in_abundantly.descr": "Let Villagers or Zombie Piglins give you red packets.",
+  "advancements.may_wealth_flow_in_abundantly.title": "May Wealth Flow In Abundantly",
+  "advancements.prosperous_and_thriving.title": "Prosperous And Thriving",
+  "advancements.prosperous_and_thriving.descr": "Make the Snow Golem set off Fireworks and hurt you."
 }

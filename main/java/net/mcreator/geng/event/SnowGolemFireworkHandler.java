@@ -3,10 +3,12 @@ package net.mcreator.geng.event;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.ProjectileImpactEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 
 import net.minecraft.world.entity.projectile.Snowball;
 import net.minecraft.world.entity.animal.SnowGolem;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -17,11 +19,17 @@ import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.advancements.AdvancementHolder;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.tags.DamageTypeTags;
 
 import net.mcreator.geng.init.GengModMobEffects;
 import net.mcreator.geng.GengMod;
 
 import java.util.Random;
+import java.util.List;
 
 @EventBusSubscriber(modid = GengMod.MODID, bus = EventBusSubscriber.Bus.GAME)
 public class SnowGolemFireworkHandler {
@@ -152,6 +160,83 @@ public class SnowGolemFireworkHandler {
         
         GengMod.LOGGER.debug("恭喜发财雪傀儡雪球在 ({}, {}, {}) 处爆炸，掉落 {} 个铁粒", 
             String.format("%.2f", x), String.format("%.2f", y), String.format("%.2f", z), ironCount);
+    }
+    
+    /**
+     * 监听实体受伤事件，检测玩家是否被恭喜发财雪傀儡的烟花炸伤
+     */
+    @SubscribeEvent
+    public static void onLivingDamage(LivingDamageEvent.Post event) {
+        // 只在服务端执行
+        if (event.getEntity().level().isClientSide()) {
+            return;
+        }
+        
+        // 只处理玩家
+        if (!(event.getEntity() instanceof Player)) {
+            return;
+        }
+        
+        Player player = (Player) event.getEntity();
+        
+        // 获取伤害来源
+        DamageSource source = event.getSource();
+        
+        // 检查伤害来源是否为烟花爆炸
+        if (source.is(DamageTypeTags.IS_EXPLOSION)) {
+            // 获取爆炸位置
+            net.minecraft.world.phys.Vec3 explosionPos = source.getSourcePosition();
+            double explosionX, explosionY, explosionZ;
+            
+            if (explosionPos != null) {
+                explosionX = explosionPos.x();
+                explosionY = explosionPos.y();
+                explosionZ = explosionPos.z();
+            } else {
+                // 如果无法获取爆炸位置，使用玩家位置
+                explosionX = player.getX();
+                explosionY = player.getY();
+                explosionZ = player.getZ();
+            }
+            
+            // 查找附近的雪傀儡，检查是否有恭喜发财效果
+            List<SnowGolem> nearbySnowGolems = player.level().getEntitiesOfClass(
+                SnowGolem.class, 
+                player.getBoundingBox().inflate(10.0) // 10格范围内
+            );
+            
+            for (SnowGolem snowGolem : nearbySnowGolems) {
+                // 检查雪傀儡与爆炸位置的距离
+                double distance = snowGolem.distanceToSqr(explosionX, explosionY, explosionZ);
+                if (distance > 25.0) { // 5格半径内
+                    continue;
+                }
+                
+                // 检查雪傀儡是否有恭喜发财效果
+                ResourceLocation effectLocation = net.minecraft.core.registries.BuiltInRegistries.MOB_EFFECT.getKey(GengModMobEffects.WISHING_YOU_PROSPERITY.get());
+                if (effectLocation == null) {
+                    continue;
+                }
+                
+                Holder<net.minecraft.world.effect.MobEffect> effectHolder;
+                try {
+                    effectHolder = snowGolem.level().registryAccess()
+                        .lookupOrThrow(Registries.MOB_EFFECT)
+                        .getOrThrow(ResourceKey.create(Registries.MOB_EFFECT, effectLocation));
+                } catch (Exception e) {
+                    continue;
+                }
+                
+                MobEffectInstance effectInstance = snowGolem.getEffect(effectHolder);
+                if (effectInstance != null && effectInstance.getDuration() > 0) {
+                    // 授予进度
+                    grantProsperousAndThriving(player);
+                    
+                    GengMod.LOGGER.debug("玩家 {} 被恭喜发财雪傀儡的烟花炸伤，获得进度", player.getName().getString());
+                    break; // 找到符合条件的雪傀儡后跳出循环
+                }
+            }
+        }
     }
     
     private static String generateSimplifiedFireworkCommand(double x, double y, double z, Random random) {
@@ -305,5 +390,26 @@ public class SnowGolemFireworkHandler {
         }
         
         return colors;
+    }
+    
+    /**
+     * 授予进度 geng:prosperous_and_thriving
+     * 当玩家被恭喜发财雪傀儡的烟花炸伤时触发
+     */
+    private static void grantProsperousAndThriving(Player player) {
+        if (player instanceof ServerPlayer serverPlayer) {
+            AdvancementHolder advancementHolder = serverPlayer.server.getAdvancements()
+                .get(ResourceLocation.parse("geng:prosperous_and_thriving"));
+            
+            if (advancementHolder != null) {
+                AdvancementProgress progress = serverPlayer.getAdvancements().getOrStartProgress(advancementHolder);
+                if (!progress.isDone()) {
+                    for (String criterion : progress.getRemainingCriteria()) {
+                        serverPlayer.getAdvancements().award(advancementHolder, criterion);
+                    }
+                    GengMod.LOGGER.debug("玩家 {} 获得进度: geng:prosperous_and_thriving", player.getName().getString());
+                }
+            }
+        }
     }
 }

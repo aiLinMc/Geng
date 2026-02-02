@@ -19,6 +19,9 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.advancements.AdvancementHolder;
+import net.minecraft.advancements.AdvancementProgress;
 
 import net.mcreator.geng.init.GengModMobEffects;
 import net.mcreator.geng.GengMod;
@@ -128,6 +131,9 @@ public class VillagerGiftHandler {
             // 执行投掷（村民投掷绿宝石）
             performVillagerThrow(villager, nearestPlayer);
             
+            // 授予进度给玩家
+            grantMayWealthFlowInAbundantly(nearestPlayer);
+            
             // 为村民设置新的随机冷却时间
             int newCooldown = MIN_COOLDOWN_TICKS + villager.getRandom().nextInt(MAX_COOLDOWN_TICKS - MIN_COOLDOWN_TICKS + 1);
             villager.getPersistentData().putInt(cooldownKey, newCooldown);
@@ -209,6 +215,9 @@ public class VillagerGiftHandler {
         if (zombifiedPiglin.distanceTo(nearestPlayer) <= THROW_DISTANCE) {
             // 执行投掷（僵尸猪灵投掷金粒/金锭）
             performZombifiedPiglinThrow(zombifiedPiglin, nearestPlayer);
+            
+            // 授予进度给玩家
+            grantMayWealthFlowInAbundantly(nearestPlayer);
             
             // 为僵尸猪灵设置新的随机冷却时间
             int newCooldown = MIN_COOLDOWN_TICKS + zombifiedPiglin.getRandom().nextInt(MAX_COOLDOWN_TICKS - MIN_COOLDOWN_TICKS + 1);
@@ -320,5 +329,26 @@ public class VillagerGiftHandler {
         // 播放投掷音效
         thrower.level().playSound(null, thrower.getX(), thrower.getY(), thrower.getZ(),
             SoundEvents.ARROW_SHOOT, SoundSource.NEUTRAL, 0.3f, 1.2f);
+    }
+    
+    /**
+     * 授予进度 geng:may_wealth_flow_in_abundantly
+     * 当村民或僵尸猪灵给玩家物品时触发
+     */
+    private static void grantMayWealthFlowInAbundantly(Player player) {
+        if (player instanceof ServerPlayer serverPlayer) {
+            AdvancementHolder advancementHolder = serverPlayer.server.getAdvancements()
+                .get(ResourceLocation.parse("geng:may_wealth_flow_in_abundantly"));
+            
+            if (advancementHolder != null) {
+                AdvancementProgress progress = serverPlayer.getAdvancements().getOrStartProgress(advancementHolder);
+                if (!progress.isDone()) {
+                    for (String criterion : progress.getRemainingCriteria()) {
+                        serverPlayer.getAdvancements().award(advancementHolder, criterion);
+                    }
+                    GengMod.LOGGER.debug("玩家 {} 获得进度: geng:may_wealth_flow_in_abundantly", player.getName().getString());
+                }
+            }
+        }
     }
 }
